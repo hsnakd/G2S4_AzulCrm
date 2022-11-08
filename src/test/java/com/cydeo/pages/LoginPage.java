@@ -42,9 +42,11 @@ public class LoginPage {
     @FindBy(xpath = "//div[@class='log-popup-header']")
     public WebElement authorization;
 
+    @FindBy(xpath = "//span[@class='menu-item-link-text']")
+    public WebElement activityStream;
 
-
-
+    @FindBy(xpath = "//span[@id='user-name']")
+    public WebElement profileUsername;
 
 
 }
