@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.cydeo</groupId>
+    <artifactId>CucumberProjectHsnAkd</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <!-- https://cucumber.io/docs/guides/parallel-execution/?lang=java -->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>     <!--THE COMPANY NAME   -->
+                <artifactId>maven-surefire-plugin</artifactId>  <!-- PROJECT NAME  -->
+                <version>3.0.0-M5</version>                     <!--VERSION OF THE PLUGIN   -->
+
+                <configuration>                                 <!-- We provide addition configurations  -->
+                    <parallel>methods</parallel>                <!--We run .feature files in parallel   -->
+                    <!-- Runs the Scenarios in parallel with Runner Classes
+                    <parallel>classes</parallel>
+                     -->
+                    <!--
+                    <useUnlimitedThreads>true</useUnlimitedThreads>
+                    -->
+                    <threadCount>4</threadCount>                <!-- How many threads we want to generate  -->
+                    <perCoreThreadCount>false</perCoreThreadCount><!--   -->
+                    <testFailureIgnore>true</testFailureIgnore> <!-- Will not stop if a test fails  -->
+
+                    <includes>
+                        <include>**/CukesRunner*.java</include> <!--when we use "mvn test" lifecycle, it will find the .java class that has the name contains "CukesRunner"   -->
+                    </includes>
+
+                </configuration>
+
+            </plugin>
+        </plugins>
+
+    </build>
+
+    <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.3.0</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.2.3</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.2.3</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://gitlab.com/jamietanna/cucumber-reporting-plugin -->
+        <!-- https://github.com/damianszczepanik/cucumber-reporting -->
+        <dependency>
+            <groupId>me.jvt.cucumber</groupId>
+            <artifactId>reporting-plugin</artifactId>
+            <version>7.2.0</version>
+        </dependency>
+
+
+        <!--If you want to get rid of SLF4J Failed to load message from the console -->
+        <!--SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+            SLF4J: Defaulting to no-operation (NOP) logger implementation
+            SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details. -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.32</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.2</version>
+        </dependency>
+
+
+
+    </dependencies>
+
+</project>
