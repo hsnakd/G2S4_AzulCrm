@@ -27,8 +27,11 @@ public class Hasan_US1537_QuickNavigateTaskPage {
     @FindBy(xpath = "//*[@id=\"bx-component-scope-lifefeed_task_form-responsible\"]/span[2]/a[1]")
     public WebElement addMoreButton;
 
+    @FindBy(xpath = "//div[.='marketing99@cybertekschool.com']")
+    public WebElement addFirstPeople;
+
     @FindBy(xpath = "//div[.='helpdesk1@cybertekschool.com']")
-    public WebElement addPeople;
+    public WebElement addSecondPeople;
 
     @FindBy(xpath = "//span[@class='task-form-field-controls']")
     public WebElement addPeopleBox;
@@ -44,6 +47,9 @@ public class Hasan_US1537_QuickNavigateTaskPage {
 
     @FindBy(xpath = "//a[@class='task-title task-status-text-color-accepted']")
     public WebElement taskName;
+
+    @FindBy(xpath = "//a[@class='task-responsible-link']")
+    public WebElement responsiblePersonCheck;
 
 
 
