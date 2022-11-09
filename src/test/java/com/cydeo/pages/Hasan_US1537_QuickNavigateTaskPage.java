@@ -12,6 +12,8 @@ public class Hasan_US1537_QuickNavigateTaskPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    String person1 = "helpdesk1@cybertekschool.com";
+
     @FindBy(xpath = "//span[.='Task']")
     public WebElement taskLink;
 
@@ -27,8 +29,17 @@ public class Hasan_US1537_QuickNavigateTaskPage {
     @FindBy(xpath = "//*[@id=\"bx-component-scope-lifefeed_task_form-responsible\"]/span[2]/a[1]")
     public WebElement addMoreButton;
 
-    @FindBy(xpath = "//div[.='helpdesk1@cybertekschool.com']")
+    @FindBy(xpath = "//a[.='helpdesk1@cybertekschool.com']")
     public WebElement addPeople;
+
+    @FindBy(xpath = "//a[.='marketing99@cybertekschool.com']")
+    public WebElement addSecondPeople;
+
+    @FindBy(xpath = "//a[@id='anchor_responsible_g8ljfQ5x']")
+    public WebElement addPeopleCheck;
+
+    @FindBy(xpath = "//a[@id='anchor_responsible_LM7TabEW']")
+    public WebElement addSecondPeopleCheck;
 
     @FindBy(xpath = "//span[@class='task-form-field-controls']")
     public WebElement addPeopleBox;

@@ -37,6 +37,8 @@ public class Hasan_US1537_QuickNavigateTask {
         taskPage.addMoreButton.click();
         BrowserUtils.waitFor(3);
         taskPage.addPeople.click();
+        BrowserUtils.waitFor(3);
+        taskPage.addSecondPeople.click();
     }
     @When("Click on the send button to send the task")
     public void click_on_the_send_button_to_send_the_task() {
@@ -57,4 +59,22 @@ public class Hasan_US1537_QuickNavigateTask {
 //        BrowserUtils.verifyElementDisplayed(taskPage.highPriorityCheck);
 //        Assert.assertTrue(taskPage.highPriorityCheck.isDisplayed());
     }
+
+    @Then("Verify the task is assigned more than one user")
+    public void verify_the_task_is_assigned_more_than_one_user() {
+        taskPage.taskName.click();
+        BrowserUtils.waitFor(4);
+        String expectedPeopleCheck = "helpdesk1@cybertekschool.com";
+        String actualPeopleCheck = taskPage.addPeopleCheck.getText();
+
+        String expectedSecondPeopleCheck = "marketing99@cybertekschool.com";
+        String actualSecondPeopleCheck = taskPage.addPeopleCheck.getText();
+
+        Assert.assertEquals(expectedPeopleCheck, actualPeopleCheck);
+        Assert.assertEquals(expectedSecondPeopleCheck, actualSecondPeopleCheck);
+
+//        Assert.assertTrue(taskPage.addPeopleCheck.isDisplayed());
+//        Assert.assertTrue(taskPage.addSecondPeopleCheck.isDisplayed());
+    }
+
 }
