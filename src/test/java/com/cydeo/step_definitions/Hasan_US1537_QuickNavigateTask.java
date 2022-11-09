@@ -2,7 +2,6 @@ package com.cydeo.step_definitions;
 
 import com.cydeo.pages.Hasan_US1537_QuickNavigateTaskPage;
 import com.cydeo.utilities.BrowserUtils;
-import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,13 +11,11 @@ public class Hasan_US1537_QuickNavigateTask {
 
     Hasan_US1537_QuickNavigateTaskPage taskPage = new Hasan_US1537_QuickNavigateTaskPage();
     String taskName = "US-1537_TC-01";
-    String message = "To do list";
 
     @When("Click the TASK on the Quick Navigate Menu")
     public void click_the_task_on_the_quick_navigate_menu() {
         taskPage.taskLink.click();
     }
-
     @When("Click High Priority checkbox")
     public void click_high_priority_checkbox() {
         taskPage.highPriority.click();
@@ -31,7 +28,7 @@ public class Hasan_US1537_QuickNavigateTask {
     @When("Write a message in the message box")
     public void write_a_message_in_the_message_box() throws InterruptedException {
         Driver.getDriver().switchTo().frame(1);
-        taskPage.messageBox.sendKeys(message);
+        taskPage.messageBox.sendKeys("To do list");
     }
     @When("Add an employee name to the Responsible person section")
     public void add_an_employee_name_to_the_responsible_person_section() throws InterruptedException {
@@ -40,6 +37,7 @@ public class Hasan_US1537_QuickNavigateTask {
         taskPage.addMoreButton.click();
         BrowserUtils.waitFor(3);
         taskPage.addPeople.click();
+        BrowserUtils.waitFor(3);
         taskPage.addSecondPeople.click();
     }
     @When("Click on the send button to send the task")
@@ -62,10 +60,21 @@ public class Hasan_US1537_QuickNavigateTask {
 //        Assert.assertTrue(taskPage.highPriorityCheck.isDisplayed());
     }
 
-    @Then("Verify that the task is assigned to more than one user")
-    public void verifyThatTheTaskIsAssignedToMoreThanOneUser() {
+    @Then("Verify the task is assigned more than one user")
+    public void verify_the_task_is_assigned_more_than_one_user() {
         taskPage.taskName.click();
-        String expectedText = ConfigurationReader.getProperty("");
-        String actualText = taskPage.responsiblePersonCheck.getText();
+        BrowserUtils.waitFor(4);
+        String expectedPeopleCheck = "helpdesk1@cybertekschool.com";
+        String actualPeopleCheck = taskPage.addPeopleCheck.getText();
+
+        String expectedSecondPeopleCheck = "marketing99@cybertekschool.com";
+        String actualSecondPeopleCheck = taskPage.addPeopleCheck.getText();
+
+        Assert.assertEquals(expectedPeopleCheck, actualPeopleCheck);
+        Assert.assertEquals(expectedSecondPeopleCheck, actualSecondPeopleCheck);
+
+//        Assert.assertTrue(taskPage.addPeopleCheck.isDisplayed());
+//        Assert.assertTrue(taskPage.addSecondPeopleCheck.isDisplayed());
     }
+
 }
