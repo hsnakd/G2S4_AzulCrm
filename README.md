@@ -1,20 +1,19 @@
 # G2S4_AzulCrm
 
-* Git Local Branch Name 
-    ==> Name_USNumber
-    ==> Hasan_US1537
-  
 * Pages Name 
     ==> Name_USNumber_USNamePage
     ==> Hasan_US1537_QuickNavigateTaskPage
+
 
 * Step Definitions Name 
     ==> Name_USNumber_USName
     ==> Hasan_US1537_QuickNavigateTask
     
+    
 * Features Name 
     ==> Name_USNumber_USName
     ==> Hasan_US1537_QuickNavigateTask
+
 
 * Pre-Conditions (Login)
     Background: log in page feature
@@ -23,6 +22,7 @@
     "hr"    
     "marketing"
     "helpdesk"
+
 
 * configuration.properties
 
@@ -44,5 +44,14 @@
     tags = "@wip",
 
 
+* Git Local Branch Name 
+    ==> Name_USNumber
+    ==> Hasan_US1537
 
 
+* Commit Name
+    ==> Name_USNumber_CommitName
+    ==> Hasan_US1537_TC01 Done
+
+
+*  
