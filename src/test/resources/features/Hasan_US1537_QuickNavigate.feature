@@ -25,7 +25,6 @@ Feature: Quick Navigate Menu feature
 
 #  2. HR User should be able to assign a task to more than one user (Test with adding 3 users max.)
   Scenario: HR User should be able to assign a task to more than one user
-
     And Write Task Name in the Things to do box
     And  Write a message in the message box
     And  Add an employee name to the Responsible person section
@@ -36,11 +35,19 @@ Feature: Quick Navigate Menu feature
 
 
 #  3. When task(s) is(are) created, they can be seen on the count on the homepage under "MY TASKS" table.
+  Scenario: When task is created, it can be seen on the count on the homepage under "MY TASKS" table
+    And Write Task Name in the Things to do box
+    And  Write a message in the message box
+    And  Add an employee name to the Responsible person section
+    And  Click on the send button to send the task
+    And  Click the TASK on the left side menu
+    Then Verify if the task is high priority
 
 
 
 #  4. Checklist should be able to be added while creating a task.
-
+  Scenario: Checklist should be able to be added while creating a task
+  And
 
 
 #  5. Deadline should be able to be added while creating a task.
