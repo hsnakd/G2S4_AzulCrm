@@ -29,10 +29,21 @@ public class Hasan_US1537_QuickNavigateTaskPage {
     @FindBy(xpath = "//*[@id=\"bx-component-scope-lifefeed_task_form-responsible\"]/span[2]/a[1]")
     public WebElement addMoreButton;
 
+<<<<<<<<< Temporary merge branch 1
+    @FindBy(xpath = "//div[.='marketing99@cybertekschool.com']")
+    public WebElement addFirstPeople;
+
     @FindBy(xpath = "//div[.='helpdesk1@cybertekschool.com']")
     public WebElement addSecondPeople;
 
     @FindBy(xpath = "//div[.='marketing99@cybertekschool.com']")
+    public WebElement addSecondPeople;
+=========
+    @FindBy(xpath = "//a[.='helpdesk1@cybertekschool.com']")
+    public WebElement addPeople;
+>>>>>>>>> Temporary merge branch 2
+
+    @FindBy(xpath = "//a[.='marketing99@cybertekschool.com']")
     public WebElement addSecondPeople;
 
     @FindBy(xpath = "//a[@id='anchor_responsible_g8ljfQ5x']")

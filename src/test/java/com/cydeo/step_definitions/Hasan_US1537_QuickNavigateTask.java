@@ -68,7 +68,7 @@ public class Hasan_US1537_QuickNavigateTask {
         String actualPeopleCheck = taskPage.addPeopleCheck.getText();
 
         String expectedSecondPeopleCheck = "marketing99@cybertekschool.com";
-        String actualSecondPeopleCheck = taskPage.addPeopleCheck.getText();
+        String actualSecondPeopleCheck = taskPage.addSecondPeopleCheck.getText();
 
         Assert.assertEquals(expectedPeopleCheck, actualPeopleCheck);
         Assert.assertEquals(expectedSecondPeopleCheck, actualSecondPeopleCheck);
