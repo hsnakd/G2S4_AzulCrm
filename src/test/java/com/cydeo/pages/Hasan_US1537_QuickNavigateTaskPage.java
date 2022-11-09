@@ -21,23 +21,29 @@ public class Hasan_US1537_QuickNavigateTaskPage {
     @FindBy(xpath = "//input[@id='tasks-task-priority-cb']")
     public WebElement highPriority;
 
-    @FindBy(xpath = "//body[@class='vsc-initialized']")
-    public WebElement messageBox1;
-
-    @FindBy(xpath = "//tbody/tr[1]/td[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/form[1]/div[2]/div[6]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[3]/div[1]/iframe[1]")
+    @FindBy(xpath = "//body[@style='min-height: 84px;']")
     public WebElement messageBox;
 
-    @FindBy(xpath = "//a[@class='js-id-tdp-mem-sel-is-open-form task-form-field-when-filled task-form-field-link add']")
+    @FindBy(xpath = "//*[@id=\"bx-component-scope-lifefeed_task_form-responsible\"]/span[2]/a[1]")
     public WebElement addMoreButton;
 
-    @FindBy(xpath = "(//iframe[@class='bx-editor-iframe'])[2]")
-    public WebElement iframe;
+    @FindBy(xpath = "//div[.='helpdesk1@cybertekschool.com']")
+    public WebElement addPeople;
 
-    @FindBy(xpath = "")
-    public WebElement a;
+    @FindBy(xpath = "//span[@class='task-form-field-controls']")
+    public WebElement addPeopleBox;
 
-    @FindBy(xpath = "//*[@id='bx-html-editor-iframe-cnt-lifefeed_task_form']//iframe")
-    public WebElement bxEditorIframe;
+    @FindBy(xpath = "//button[@id='blog-submit-button-save']")
+    public WebElement sendButton;
+
+    @FindBy(xpath = "//a[@title='Tasks']")
+    public WebElement taskLeftSide;
+
+    @FindBy(xpath = "//span[.='High Priority']")
+    public WebElement highPriorityCheck;
+
+    @FindBy(xpath = "//a[@class='task-title task-status-text-color-accepted']")
+    public WebElement taskName;
 
 
 
