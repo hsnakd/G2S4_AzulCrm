@@ -39,7 +39,7 @@ public class Hasan_US1537_QuickNavigateTask {
 
         taskPage.addMoreButton.click();
         BrowserUtils.waitFor(3);
-        taskPage.addFirstPeople.click();
+        taskPage.addPeople.click();
         taskPage.addSecondPeople.click();
     }
     @When("Click on the send button to send the task")
