@@ -1,4 +1,4 @@
-@AZLC-1537
+@AZLC-1539
 Feature: Quick Navigate Menu feature
   User Story :
   As a user, I should be able to assign tasks under Quick Navigate Menu.
@@ -6,7 +6,14 @@ Feature: Quick Navigate Menu feature
 
   Background: log in page feature
     Given users log in with valid credentials as a "hr"
-    When Click the TASK on the Quick Navigate Menu
+
+
+   # When Click the TASK on the Quick Navigate Menu
+
+
+
+
+
 
 
 
