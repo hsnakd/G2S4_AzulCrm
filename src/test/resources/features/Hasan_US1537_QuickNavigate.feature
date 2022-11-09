@@ -37,10 +37,15 @@ Feature: Quick Navigate Menu feature
 #  3. When task(s) is(are) created, they can be seen on the count on the homepage under "MY TASKS" table.
 
 
+
 #  4. Checklist should be able to be added while creating a task.
+
 
 
 #  5. Deadline should be able to be added while creating a task.
 
 
+
 #  6. Time planning function should be able to be used in the setting of deadline.
+
+
