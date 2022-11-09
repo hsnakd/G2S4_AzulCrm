@@ -6,27 +6,12 @@ Feature: Quick Navigate Menu feature
 
   Background: log in page feature
     Given users log in with valid credentials as a "hr"
-
     When Click the TASK on the Quick Navigate Menu
-
 
 
 # 1. HR User should be able to create a "High priority" tasks with the mandatory fields.
 
-  @AZLC-1540
-  Scenario:   HR User should be able to create a "High priority" tasks with the mandatory fields.
-    And  Click High Priority checkbox
-    And Write Task Name in the Things to do box
-    Then Verify if the task is high priority
-
-
-
-#  2. HR User should be able to assign a task to more than one user (Test with adding 3 users max.)
-  @AZLC-1541
-  Scenario:   HR User should be able to create a "High priority" tasks with the mandatory fields.
-    And  Click High Priority checkbox
-
-  @AZLC-1544
+    @AZLC-1545
   Scenario:   HR User should be able to create a "High priority" tasks with the mandatory fields.
     And  Click High Priority checkbox
     And Write Task Name in the Things to do box
@@ -37,7 +22,7 @@ Feature: Quick Navigate Menu feature
     Then Verify if the task is high priority
 
 
-  @wip
+
 #  2. HR User should be able to assign a task to more than one user (Test with adding 3 users max.)
   Scenario: HR User should be able to assign a task to more than one user
 
