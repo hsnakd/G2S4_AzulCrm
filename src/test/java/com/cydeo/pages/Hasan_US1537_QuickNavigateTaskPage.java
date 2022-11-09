@@ -30,6 +30,9 @@ public class Hasan_US1537_QuickNavigateTaskPage {
     @FindBy(xpath = "//div[.='helpdesk1@cybertekschool.com']")
     public WebElement addPeople;
 
+    @FindBy(xpath = "//div[.='marketing99@cybertekschool.com']")
+    public WebElement addSecondPeople;
+
     @FindBy(xpath = "//span[@class='task-form-field-controls']")
     public WebElement addPeopleBox;
 
