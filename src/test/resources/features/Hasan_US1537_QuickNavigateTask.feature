@@ -6,6 +6,7 @@ Feature: Quick Navigate Menu feature
 
   Background: log in page feature
     Given users log in with valid credentials as a "hr"
+
     When Click the TASK on the Quick Navigate Menu
 
 
