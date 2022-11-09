@@ -1,12 +1,16 @@
 package com.cydeo.step_definitions;
 
 import com.cydeo.pages.Hasan_US1537_QuickNavigateTaskPage;
+import com.cydeo.utilities.BrowserUtils;
+import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class Hasan_US1537_QuickNavigateTask {
 
     Hasan_US1537_QuickNavigateTaskPage taskPage = new Hasan_US1537_QuickNavigateTaskPage();
+    String taskName = "US-1537_TC-01";
 
     @When("Click the TASK on the Quick Navigate Menu")
     public void click_the_task_on_the_quick_navigate_menu() {
@@ -18,28 +22,39 @@ public class Hasan_US1537_QuickNavigateTask {
     }
     @When("Write Task Name in the Things to do box")
     public void write_task_name_in_the_things_to_do_box() {
-        taskPage.messageTitle.sendKeys("US-1537 / TC-01");
+        taskPage.messageTitle.sendKeys(taskName);
     }
+
     @When("Write a message in the message box")
     public void write_a_message_in_the_message_box() throws InterruptedException {
-//        Driver.getDriver().switchTo().frame(taskPage.bxEditorIframe);
+        Driver.getDriver().switchTo().frame(1);
         taskPage.messageBox.sendKeys("To do list");
-        Thread.sleep(5000);
     }
     @When("Add an employee name to the Responsible person section")
-    public void add_an_employee_name_to_the_responsible_person_section() {
+    public void add_an_employee_name_to_the_responsible_person_section() throws InterruptedException {
+        Driver.getDriver().switchTo().parentFrame();
 
+        taskPage.addMoreButton.click();
+        BrowserUtils.waitFor(3);
+        taskPage.addPeople.click();
     }
     @When("Click on the send button to send the task")
     public void click_on_the_send_button_to_send_the_task() {
-
+        taskPage.sendButton.click();
     }
     @When("Click the TASK on the left side menu")
     public void click_the_task_on_the_left_side_menu() {
-
+        BrowserUtils.waitFor(3);
+        taskPage.taskLeftSide.click();
     }
     @Then("Verify if the task is high priority")
     public void verify_if_the_task_is_high_priority() {
-
+        String expectedText = taskName;
+        String actualText = taskPage.taskName.getText();
+        Assert.assertEquals(expectedText,actualText);
+//        taskPage.taskName.click();
+//        BrowserUtils.waitForVisibility(taskPage.highPriorityCheck,10);
+//        BrowserUtils.verifyElementDisplayed(taskPage.highPriorityCheck);
+//        Assert.assertTrue(taskPage.highPriorityCheck.isDisplayed());
     }
 }
