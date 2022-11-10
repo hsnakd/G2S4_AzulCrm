@@ -86,7 +86,7 @@ public class Oguz_US1531_AddingMessage {
 
     @And("user click video source button")
     public void userClickVideoSourceButton() {
-        BrowserUtils.waitForVisibility(messagePage.linkUrlBox,10);
+       // BrowserUtils.waitForVisibility(messagePage.linkUrlBox,10);
         messagePage.linkUrlBox.click();
     }
 
@@ -148,6 +148,19 @@ public class Oguz_US1531_AddingMessage {
     @Then("user should see the tag in the tag area")
     public void userShouldSeeTheTagInTheTagArea() {
         Assert.assertEquals(messagePage.tagsArea.getText(),"group2-2");
+    }
+
+    //---AC6----------------------------------------------------------------
+
+    @And("user remove the tag")
+    public void userRemoveTheTag() {
+        messagePage.crossOnTag.click();
+        BrowserUtils.sleep(3);
+    }
+
+    @Then("tag is removed in the tag area")
+    public void tagIsRemovedInTheTagArea() {
+        //Assert.assertTrue(messagePage.tagsArea);
     }
 
 

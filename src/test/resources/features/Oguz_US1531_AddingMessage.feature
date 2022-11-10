@@ -59,3 +59,12 @@ Feature: Message Function
     Then user should see the tag in the tag area
 
 
+  @AC6
+  Scenario: User should be able to remove tags before sending the message
+    When user click the add tag button
+    And  user write enter any string
+    And user enter add button
+    And user remove the tag
+    Then tag is removed in the tag area
+
+
