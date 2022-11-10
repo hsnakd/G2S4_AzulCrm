@@ -33,3 +33,38 @@ Feature: Message Function
     And  user write text link
     And user click save button
     Then message body contain link text
+
+
+  @AC3
+  Scenario:  User should be able to insert YouTube and Vimeo video.
+    When user click insert video button
+    And user click video source button
+    And user enter valid video URL
+    And user click save button
+    Then message body contain video link
+
+
+  @AC4
+  Scenario:  User should be able to add quotes.
+    When  user click add quotes button
+    And   user write something in there
+    Then  user should see the quote in the text body
+
+
+  @AC5
+  Scenario: User should be able to add tags in message.
+    When user click the add tag button
+    And  user write enter any string
+    And user enter add button
+    Then user should see the tag in the tag area
+
+
+  @AC6
+  Scenario: User should be able to remove tags before sending the message
+    When user click the add tag button
+    And  user write enter any string
+    And user enter add button
+    And user remove the tag
+    Then tag is removed in the tag area
+
+
