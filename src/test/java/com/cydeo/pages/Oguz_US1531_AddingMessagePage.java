@@ -30,7 +30,7 @@ public class Oguz_US1531_AddingMessagePage {
     @FindBy(id = "linkidPostFormLHE_blogPostForm-text")
     public WebElement linkTextBox;
 
-    @FindBy(xpath = "//input[@placeholder='YouTube or Vimeo video URL']")
+    @FindBy(xpath = "//input[@placeholder='Link URL']")
     public WebElement linkUrlBox;
 
     @FindBy(xpath = "//input[@value='Save']")
