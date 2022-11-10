@@ -24,3 +24,12 @@ Feature: Message Function
     And   user click group2.2
     And   user select any user
     Then  user should see selected user in the message body
+
+
+  @AC2
+  Scenario: User should be able to attach link to specified text.
+    When user click link button
+    And  user write text name
+    And  user write text link
+    And user click save button
+    Then message body contain link text

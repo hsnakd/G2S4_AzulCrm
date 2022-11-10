@@ -2,6 +2,7 @@ package com.cydeo.step_definitions;
 
 import com.cydeo.pages.Oguz_US1531_AddingMessagePage;
 import com.cydeo.utilities.BrowserUtils;
+import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -44,6 +45,37 @@ public class Oguz_US1531_AddingMessage {
     //---AC2---------------------------------------------------------------
 
 
-    
-    
+    @When("user click link button")
+    public void userClickLinkButton() {
+        messagePage.linkBtn.click();
+    }
+
+    @And("user write text name")
+    public void userWriteTextName() {
+        messagePage.linkTextBox.sendKeys("this text in order for test");
+    }
+
+    @And("user write text link")
+    public void userWriteTextLink() {
+        messagePage.linkUrlBox.sendKeys("https://docs.google.com/document/d/1WngspGGhOBrJDjmbXVQsIQVs386ca2121IbEqJmq1bw/edit");
+    }
+
+    @And("user click save button")
+    public void userClickSaveButton() {
+        BrowserUtils.sleep(2);
+        messagePage.saveLinkBtn.click();
+        System.out.println("save btn click");
+    }
+
+    @Then("message body contain link text")
+    public void messageBodyContainLinkText() {
+        Driver.getDriver().switchTo().frame(messagePage.messageBodyIframe);
+        System.out.println("messagePage.linkTextInBody.getText() = " + messagePage.linkTextInBody.getText());
+        Driver.getDriver().switchTo().defaultContent();
+    }
+
+
+
+
+
 }
