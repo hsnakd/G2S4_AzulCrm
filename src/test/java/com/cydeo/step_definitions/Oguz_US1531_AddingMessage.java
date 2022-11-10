@@ -6,6 +6,7 @@ import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class Oguz_US1531_AddingMessage {
     Oguz_US1531_AddingMessagePage messagePage = new Oguz_US1531_AddingMessagePage();
@@ -72,6 +73,55 @@ public class Oguz_US1531_AddingMessage {
         Driver.getDriver().switchTo().frame(messagePage.messageBodyIframe);
         System.out.println("messagePage.linkTextInBody.getText() = " + messagePage.linkTextInBody.getText());
         Driver.getDriver().switchTo().defaultContent();
+    }
+
+
+    //----AC3--------------------------------------------------------------------------
+
+
+    @When("user click insert video button")
+    public void userClickInsertVideoButton() {
+        messagePage.insertVideBtn.click();
+    }
+
+    @And("user click video source button")
+    public void userClickVideoSourceButton() {
+        BrowserUtils.waitForVisibility(messagePage.linkUrlBox,10);
+        messagePage.linkUrlBox.click();
+    }
+
+    @And("user enter valid video URL")
+    public void userEnterValidVideoURL() {
+        messagePage.linkUrlBox.sendKeys("https://vimeo.com/757945187");
+        BrowserUtils.sleep(3);
+    }
+
+    @Then("message body contain video link")
+    public void messageBodyContainVideoLink() {
+
+    }
+
+
+    //-----AC4----------------------------------------------------------------------
+
+    @When("user click add quotes button")
+    public void userClickAddQuotesButton() {
+        messagePage.quoteBtn.click();
+    }
+
+
+
+    @And("user write something in there")
+    public void userWriteSomethingInThere() {
+        Driver.getDriver().switchTo().frame(messagePage.messageBodyIframe);
+        messagePage.quoteTextArea.sendKeys("deneme");
+        Driver.getDriver().switchTo().defaultContent();
+    }
+
+    @Then("user should see the quote in the text body")
+    public void userShouldSeeTheQuoteInTheTextBody() {
+        Driver.getDriver().switchTo().frame(messagePage.messageBodyIframe);
+        Assert.assertTrue(messagePage.blockquote.getText().contains("deneme"));
     }
 
 

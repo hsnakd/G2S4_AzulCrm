@@ -33,3 +33,21 @@ Feature: Message Function
     And  user write text link
     And user click save button
     Then message body contain link text
+
+
+  @AC3
+  Scenario:  User should be able to insert YouTube and Vimeo video.
+    When user click insert video button
+    And user click video source button
+    And user enter valid video URL
+    And user click save button
+    Then message body contain video link
+
+
+  @AC4
+  Scenario:  User should be able to add quotes.
+    When  user click add quotes button
+    And   user write something in there
+    Then  user should see the quote in the text body
+
+
