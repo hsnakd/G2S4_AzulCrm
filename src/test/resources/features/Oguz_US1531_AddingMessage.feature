@@ -51,3 +51,11 @@ Feature: Message Function
     Then  user should see the quote in the text body
 
 
+  @AC5
+  Scenario: User should be able to add tags in message.
+    When user click the add tag button
+    And  user write enter any string
+    And user enter add button
+    Then user should see the tag in the tag area
+
+

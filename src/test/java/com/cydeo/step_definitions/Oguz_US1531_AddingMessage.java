@@ -124,6 +124,33 @@ public class Oguz_US1531_AddingMessage {
         Assert.assertTrue(messagePage.blockquote.getText().contains("deneme"));
     }
 
+    //-----AC5--------------------------------------------------------------
+
+
+    @When("user click the add tag button")
+    public void userClickTheAddTagButton() {
+        messagePage.tagBtn.click();
+        BrowserUtils.sleep(2);
+    }
+
+    @And("user write enter any string")
+    public void userWriteEnterAnyString() {
+        messagePage.tagTextBox.sendKeys("group2-2");
+        BrowserUtils.sleep(2);
+    }
+
+    @And("user enter add button")
+    public void userEnterAddButton() {
+        messagePage.addTagBtn.click();
+        BrowserUtils.sleep(2);
+    }
+
+    @Then("user should see the tag in the tag area")
+    public void userShouldSeeTheTagInTheTagArea() {
+        Assert.assertEquals(messagePage.tagsArea.getText(),"group2-2");
+    }
+
+
 
 
 
