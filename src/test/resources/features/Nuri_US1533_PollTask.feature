@@ -1,46 +1,37 @@
 @AZLC-1533
-Feature: Quick Navigate Menu feature
+Feature: Poll tab feature
   User Story :
-  As a user, I should be able to assign tasks under Quick Navigate Menu.
+  As a user, As a user, I should be able to open a new poll by clicking on Poll tab under Active Stream.
 
 
   Background: log in page feature
     Given users log in with valid credentials as a "hr"
-    #When Click the TASK on the Quick Navigate Menu
 
 
+  @DisplayName("TC1:AddMultipleContactsFromBulkList")
+  @AZLC-1533   @TC1_US07   @wip
+  Scenario:     [TC1] - Verify that user can add users by selecting multiple contacts from Employees and Departments contacts list.
+  [AC1] - User should be able to add users by selecting multiple contacts from Employees and Department's contact lists.
 
-# 1. HR User should be able to create a "High priority" tasks with the mandatory fields.
-  @AZLC-1533
-  Scenario:   HR User should be able to create a "High priority" tasks with the mandatory fields.
-    And  Click High Priority checkbox
-    And Write Task Name in the Things to do box
-    And  Write a message in the message box
-    And  Add an employee name to the Responsible person section
-    And  Click on the send button to send the task
-    And  Click the TASK on the left side menu
-    Then Verify if the task is high priority
-
-
-
-#  2. HR User should be able to assign a task to more than one user (Test with adding 3 users max.)
-  @AZLC-1533
-  Scenario:   HR User should be able to create a "High priority" tasks with the mandatory fields.
-    And  Click High Priority checkbox
-    And Write Task Name in the Things to do box
-    And  Write a message in the message box
-    And  Add an employee name to the Responsible person section
-    And  Click on the send button to send the task
-    And  Click the TASK on the left side menu
-    Then Verify if the task is high priority
-
-#  3. When task(s) is(are) created, they can be seen on the count on the homepage under "MY TASKS" table.
+    Given click on the poll tab on the tab-menu
+    And  user clicks on add more link  on contacts input box.
+    And  user clicks on employees and departments tag to add a group of contacts
+    And  user clicks on "QA department" and then all employees as contact group
+    And  user clicks on username "hr77@cybertekschool.com" as contact name
+    Then verify that employees of "QA department"  and username "hr77@cybertekschool.com" is selected as multiple contacts
 
 
-#  4. Checklist should be able to be added while creating a task.
+  @DisplayName("TC2:AddMultipleContactsFromBulkList")
+  @AZLC-1533   @TC2_US07
+  Scenario:     [TC2] - Verify that user can add questions and multiple answers
+  [AC2]-User should be able to add questions and multiple answers
 
 
-#  5. Deadline should be able to be added while creating a task.
+    Given click on the poll tab on the tab-menu
+    And  user clicks on add more link  on contacts input box.
+    And  user clicks on employees and departments tag to add a group of contacts
+    And  user clicks on "QA department" and then all employees as contact group
+    And  user clicks on username "hr77@cybertekschool.com" as contact name
+    Then verify that employees of "QA department"  and username "hr77@cybertekschool.com" is selected as multiple contacts
 
 
-#  6. Time planning function should be able to be used in the setting of deadline.
