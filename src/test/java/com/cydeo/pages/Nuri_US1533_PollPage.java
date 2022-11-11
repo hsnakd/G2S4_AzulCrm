@@ -37,7 +37,36 @@ public class Nuri_US1533_PollPage {
     public WebElement usernameText;
 
 
+    @FindBy(xpath = "//body[@contenteditable='true']")
+    public WebElement pollTitleBox;
 
+
+    @FindBy(xpath = "//input[@id='question_0']")
+    public WebElement questionBox;
+
+    @FindBy(xpath = "//input[@id='answer_0__0_']")
+    public WebElement answerBox1;
+    @FindBy(xpath = "//input[@id='answer_0__1_']")
+    public WebElement answerBox2;
+    @FindBy(xpath = "//input[@id='answer_0__2_']")
+    public WebElement answerBox3;
+
+
+    @FindBy(xpath = "//button[@id='blog-submit-button-save']")
+    public WebElement sendButton;
+
+    //message :"how are you today?" "good" "perfect" "not bad"
+    @FindBy(xpath = "")
+    public WebElement addedPollTitle;
+    @FindBy(xpath = "//div[.='how are you today?']")
+    public WebElement addedPollQuestion;
+
+    @FindBy(xpath = "//label[.='good']")
+    public WebElement addedPollAnswer1;
+    @FindBy(xpath = "//label[.='perfect']")
+    public WebElement addedPollAnswer2;
+    @FindBy(xpath = "//label[.='not bad']")
+    public WebElement addedPollAnswer3;
 
 
 

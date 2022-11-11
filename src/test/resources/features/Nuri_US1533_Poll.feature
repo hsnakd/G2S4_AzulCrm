@@ -30,6 +30,4 @@ Feature: Poll tab feature
     And user enters a question "how are you today?" on question input box  with title "share your mood"
     And user enter answers "good" "perfect" "not bad" on answer input boxes
     And user clicks on send button
-    Then verify that user sees question and answers ("how are you today?" "good" "perfect" "not bad" ) on the message page
-
-  Given aaaa
+    Then verify that user sees question and answers "how are you today?" "good" "perfect" "not bad" on the message page
