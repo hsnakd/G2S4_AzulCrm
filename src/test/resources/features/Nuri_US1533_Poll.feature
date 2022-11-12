@@ -10,7 +10,7 @@ Feature: Poll tab feature
 
   @AZLC-1533   @TC1_US07
   Scenario:     [TC1] - Verify that user can add users by selecting multiple contacts from Employees and Departments contacts list.
-  [AC1] - User should be able to add users by selecting multiple contacts from Employees and Department's contact lists.
+                [AC1] - User should be able to add users by selecting multiple contacts from Employees and Department's contact lists.
 
     Given click on the poll tab on the tab-menu
     And  user clicks on add more link  on contacts input box.
@@ -21,15 +21,39 @@ Feature: Poll tab feature
 
 
 
-  @AZLC-1533   @TC2_US07   @wip
+  @AZLC-1533   @TC2_US07
   Scenario:     [TC2] - Verify that user can add questions and multiple answers
-  [AC2]-User should be able to add questions and multiple answers
+                [AC2] - User should be able to add questions and multiple answers
 
 
     Given click on the poll tab on the tab-menu
     And user enters a question "how are you today?" on question input box  with title "share your mood"
     And user enter answers "good" "perfect" "not bad" on answer input boxes
     And user clicks on send button
-    Then verify that user sees question and answers ("how are you today?" "good" "perfect" "not bad" ) on the message page
+    Then verify that user sees question and answers "how are you today?" "good" "perfect" "not bad" on the message page
 
-  Given aaaa
+
+  @AZLC-1533   @TC3_US07
+  Scenario:      [TC3] - Verify that user can delete questions and multiple answers
+                 [AC3] - User should be able to delete questions and multiple answers.
+
+    Given click on the poll tab on the tab-menu
+    And user enters a question "how are you today?" on question input box  with title "share your mood"
+    And user enter answers "good" "perfect" "not bad" on answer input boxes
+    And user clicks on delete x signs in input boxes
+    Then verify that questionbox is not visible and answer input boxes are empty
+
+
+
+  @AZLC-1533   @TC3_US07   @wip
+  Scenario:        [TC4] - Verify that user can select multiple choice checkbox and provide multiple choices to other attendees.
+                   [AC4] - User should be able to provide multiple choice to attendees by selecting the Allow multiple choice checkbox.
+
+
+    Given click on the poll tab on the tab-menu
+    And user enters a question "how many bread do you eat a day?" on question input box  with title "bread poll"
+    And user enters answers "one" "two" "three" on answer input boxes
+    And user clicks on allow multiple choice checkbox
+    Then verify that checkbox is selected to allow user multiple choices
+    And user clicks on send button
+    Then verify that  checkboxes are enabled next to answers

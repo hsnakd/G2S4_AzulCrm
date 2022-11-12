@@ -37,9 +37,79 @@ public class Nuri_US1533_PollPage {
     public WebElement usernameText;
 
 
+    //TC2
+
+    @FindBy(xpath = "//body[@contenteditable='true']")
+    public WebElement pollTitleBox;
+
+
+    @FindBy(xpath = "//input[@id='question_0']")
+    public WebElement questionBox;
+
+    @FindBy(xpath = "//div[@class='vote-block-title-wrap']/input")
+    public WebElement questionBox1;
+
+    @FindBy(xpath = "//input[@id='answer_0__0_']")
+    public WebElement answerBox1;
+    @FindBy(xpath = "//input[@id='answer_0__1_']")
+    public WebElement answerBox2;
+    @FindBy(xpath = "//input[@id='answer_0__2_']")
+    public WebElement answerBox3;
+
+
+    @FindBy(xpath = "//button[@id='blog-submit-button-save']")
+    public WebElement sendButton;
+
+    //message :"how are you today?" "good" "perfect" "not bad"
+    @FindBy(xpath = "")
+    public WebElement addedPollTitle;
+    @FindBy(xpath = "//div[.='how are you today?']")
+    public WebElement addedPollQuestion;
+
+    @FindBy(xpath = "//label[.='good']")
+    public WebElement addedPollAnswer1;
+    @FindBy(xpath = "//label[.='perfect']")
+    public WebElement addedPollAnswer2;
+    @FindBy(xpath = "//label[.='not bad']")
+    public WebElement addedPollAnswer3;
+
+
+    //TC3
+    @FindBy(xpath = "//label[@title='Delete question']")
+    public WebElement XQuestion;
+
+
+    @FindBy(xpath = "//label[@title='Delete answer']")
+    public WebElement XAnswer1;
+
+//input[@data-bx-answer-field= 'field-type']
+    //input[@id='answer_0__0_']
+    //label[@for='answer_0__0_']
+
+//label[@title='Delete answer']
+    //input[@id='answer_0__0_']
+
+
+        //TC4
+        @FindBy(xpath = "//label[@class= 'vote-checkbox-label']")
+        public WebElement allowMultipleChoiceCheckbox;
+
+        @FindBy(xpath = "//label[.='Answer 1']")
+        public WebElement answer1Text;
+
+        @FindBy(xpath = "(//input[@name='vote_checkbox_120[]'])[1]")
+        public WebElement answer1CheckBox;
+        //   (//input[@name='vote_checkbox_120[]'])[1]
+        //span[@class='bx-vote-block-inp-substitute']
 
 
 
 
 
+
+
+
+
+    @FindBy(xpath = "")
+    public WebElement xyz;
 }
