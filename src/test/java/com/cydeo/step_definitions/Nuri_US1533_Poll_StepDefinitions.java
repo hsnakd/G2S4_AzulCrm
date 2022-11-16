@@ -51,7 +51,6 @@ public class Nuri_US1533_Poll_StepDefinitions {
     }
 
 
-
     @Given("user clicks on username {string} as contact name")
     public void user_clicks_on_username_as_contact_name(String string) {
         pollPage.usernameContactName.click();
@@ -59,7 +58,8 @@ public class Nuri_US1533_Poll_StepDefinitions {
     }
 
     @Then("verify that employees of {string}  and username {string} is selected as multiple contacts")
-    public void verifyThatEmployeesOfAndUsernameIsSelectedAsMultipleContacts(String string0, String string1) {System.out.println(pollPage.qaDepartmentText.getText());
+    public void verifyThatEmployeesOfAndUsernameIsSelectedAsMultipleContacts(String string0, String string1) {
+        System.out.println(pollPage.qaDepartmentText.getText());
 
         System.out.println("pollPage.qaDepartmentText.getText() = " + pollPage.qaDepartmentText.getText());
         String expectedGroupText = "QA department";
@@ -75,18 +75,12 @@ public class Nuri_US1533_Poll_StepDefinitions {
     }
 
 
-
-
-
-
-
-
-
     //@TC2
     //[US007]-[AZLC-1533]-[AC2]-[TC2]
 
     @Given("user enters a question {string} on question input box  with title {string}")
     public void user_enters_a_question_on_question_input_box(String string, String string2) {
+        BrowserUtils.waitFor(2);
         pollPage.questionBox.sendKeys(string);
         //Driver.getDriver().switchTo().frame( Driver.getDriver().findElement(By.xpath("//div/iframe[@class='bx-editor-iframe']")));
         Driver.getDriver().switchTo().frame(Driver.getDriver().findElement(By.xpath("//div/iframe[@class='bx-editor-iframe']")));
@@ -95,6 +89,7 @@ public class Nuri_US1533_Poll_StepDefinitions {
         BrowserUtils.waitFor(2);
         Driver.getDriver().switchTo().parentFrame();
     }
+
     @Given("user enters answers {string} {string} {string} on answer input boxes")
     public void user_enter_answers_on_answer_input_boxes(String string, String string2, String string3) {
         pollPage.answerBox1.sendKeys(string);
@@ -110,7 +105,6 @@ public class Nuri_US1533_Poll_StepDefinitions {
         BrowserUtils.waitFor(2);
 
     }
-
 
 
     @Then("verify that user sees question and answers {string} {string} {string} {string} on the message page")
@@ -143,13 +137,10 @@ public class Nuri_US1533_Poll_StepDefinitions {
     }
 
 
-
-
-
     //@TC3
     //[US007]-[AZLC-1533]-[AC3]-[TC3]
 
-    @Given("user clicks on delete x signs in input boxes")
+    @Given("user clicks on delete x signs inside the input boxes")
     public void user_clicks_on_delete_x_signs_in_input_boxes() {
         System.out.println("user clicks on delete x signs in input boxes");
 
@@ -172,8 +163,8 @@ public class Nuri_US1533_Poll_StepDefinitions {
 */
 
 
-
     }
+
     @Then("verify that questionbox is not visible and answer input boxes are empty")
     public void verify_that_question_and_answer_input_boxes_are_empty() {
         BrowserUtils.waitFor(3);
@@ -186,11 +177,9 @@ public class Nuri_US1533_Poll_StepDefinitions {
         System.out.println("isWebElementThere = " + isWebElementThere);
         System.out.println("isWebElementThere.size() = " + isWebElementThere.size());
 
-        Assert.assertTrue(isWebElementThere.size()==0);
+        Assert.assertTrue(isWebElementThere.size() == 0);
 
     }
-
-
 
 
     //TC4
@@ -212,11 +201,51 @@ public class Nuri_US1533_Poll_StepDefinitions {
     @Then("verify that  checkboxes are enabled next to answers")
     public void verify_that_checkboxes_are_enabled_next_to_answers() {
         System.out.println("verify that  checkboxes are enabled next to answers");
+
         System.out.println("pollPage.answer1Text.getText() = " + pollPage.answer1Text.getText());
+        System.out.println("pollPage.answer2Text.getText() = " + pollPage.answer2Text.getText());
+        System.out.println("pollPage.answer3Text.getText() = " + pollPage.answer3Text.getText());
+
 
         System.out.println("pollPage.answer1CheckBox.isEnabled() = " + pollPage.answer1CheckBox.isEnabled());
+        System.out.println("pollPage.answer2CheckBox.isEnabled() = " + pollPage.answer2CheckBox.isEnabled());
+        System.out.println("pollPage.answer3CheckBox.isEnabled() = " + pollPage.answer3CheckBox.isEnabled());
 
     }
 
+    //TC5
 
+    @Then("verify that {string} alert is displayed")
+    public void verify_that_alert_is_displayed(String string) {
+        System.out.println("\"verify that {string} alert is displayed\" = " + "verify that {string} alert is displayed");
+
+
+        BrowserUtils.waitFor(2);
+        String expectedString = string;
+        String actualString = pollPage.emptyfieldAlertText.getText();
+
+        System.out.println("actualString = " + actualString);
+
+        Assert.assertEquals(actualString, expectedString);
+
+
+
+
+    }
+
+    @Then("user deletes all recipients")
+    public void user_deletes_all_recipients() {
+        BrowserUtils.waitFor(3);
+        pollPage.hoverToRemoveallEmpoyeesRecipient.click();
+        BrowserUtils.waitFor(3);
+    }
+
+    @Given("navigate back")
+    public void navigateBack() {
+        BrowserUtils.waitFor(2);
+        Driver.getDriver().navigate().back();
+        BrowserUtils.waitFor(2);
+
+
+    }
 }//endclass

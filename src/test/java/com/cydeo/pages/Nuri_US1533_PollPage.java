@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Nuri_US1533_PollPage {
 
-    public Nuri_US1533_PollPage(){
+    public Nuri_US1533_PollPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -79,8 +79,10 @@ public class Nuri_US1533_PollPage {
     public WebElement XQuestion;
 
 
-    @FindBy(xpath = "//label[@title='Delete answer']")
+    @FindBy(xpath = "//label[@class='vote-block-close dela']")
     public WebElement XAnswer1;
+    //label[@title='Delete answer']
+    //label[@class='vote-block-close dela']
 
 //input[@data-bx-answer-field= 'field-type']
     //input[@id='answer_0__0_']
@@ -90,23 +92,35 @@ public class Nuri_US1533_PollPage {
     //input[@id='answer_0__0_']
 
 
-        //TC4
-        @FindBy(xpath = "//label[@class= 'vote-checkbox-label']")
-        public WebElement allowMultipleChoiceCheckbox;
+    //TC4
+    @FindBy(xpath = "//label[@class= 'vote-checkbox-label']")
+    public WebElement allowMultipleChoiceCheckbox;
 
-        @FindBy(xpath = "//label[.='Answer 1']")
-        public WebElement answer1Text;
+    @FindBy(xpath = "//label[.='Answer 1']")
+    public WebElement answer1Text;
+    @FindBy(xpath = "//label[.='Answer 2']")
+    public WebElement answer2Text;
+    @FindBy(xpath = "//label[.='Answer 3']")
+    public WebElement answer3Text;
 
-        @FindBy(xpath = "(//input[@name='vote_checkbox_120[]'])[1]")
-        public WebElement answer1CheckBox;
-        //   (//input[@name='vote_checkbox_120[]'])[1]
-        //span[@class='bx-vote-block-inp-substitute']
+    @FindBy(xpath = "(//input[@name='vote_checkbox_120[]'])[1]")
+    public WebElement answer1CheckBox;
+    //   (//input[@name='vote_checkbox_120[]'])[1]
+    //span[@class='bx-vote-block-inp-substitute']
+    @FindBy(xpath = "(//input[@name='vote_checkbox_120[]'])[2]")
+    public WebElement answer2CheckBox;
+    @FindBy(xpath = "(//input[@name='vote_checkbox_120[]'])[3]")
+    public WebElement answer3CheckBox;
 
 
+    //TC5
 
+    @FindBy(xpath = "//span[@class='feed-add-info-text']")
+    public WebElement emptyfieldAlertText;
 
-
-
+    @FindBy(xpath = " //span[@class='feed-add-post-del-but']")
+    public WebElement hoverToRemoveallEmpoyeesRecipient;
+//span[@class='feed-add-post-destination feed-add-post-destination-all-users feed-add-post-destination-hover']
 
 
 
