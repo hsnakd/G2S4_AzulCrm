@@ -33,6 +33,7 @@ public class Nuri_US1533_PollPage {
     @FindBy(xpath = "//span[.='QA department']/span")
     public WebElement qaDepartmentText;
     //span[@id='feed-add-post-destination-item']/span/span
+
     @FindBy(xpath = "//span[.='hr77@cybertekschool.com']/span")
     public WebElement usernameText;
 
@@ -41,7 +42,6 @@ public class Nuri_US1533_PollPage {
 
     @FindBy(xpath = "//body[@contenteditable='true']")
     public WebElement pollTitleBox;
-
 
     @FindBy(xpath = "//input[@id='question_0']")
     public WebElement questionBox;
@@ -63,14 +63,14 @@ public class Nuri_US1533_PollPage {
     //message :"how are you today?" "good" "perfect" "not bad"
     @FindBy(xpath = "")
     public WebElement addedPollTitle;
-    @FindBy(xpath = "//div[.='how are you today?']")
+    @FindBy(xpath = "//div[.='how many?']")
     public WebElement addedPollQuestion;
 
-    @FindBy(xpath = "//label[.='good']")
+    @FindBy(xpath = "//label[.='one']")
     public WebElement addedPollAnswer1;
-    @FindBy(xpath = "//label[.='perfect']")
+    @FindBy(xpath = "//label[.='two']")
     public WebElement addedPollAnswer2;
-    @FindBy(xpath = "//label[.='not bad']")
+    @FindBy(xpath = "//label[.='three']")
     public WebElement addedPollAnswer3;
 
 
@@ -96,20 +96,25 @@ public class Nuri_US1533_PollPage {
     @FindBy(xpath = "//label[@class= 'vote-checkbox-label']")
     public WebElement allowMultipleChoiceCheckbox;
 
-    @FindBy(xpath = "//label[.='Answer 1']")
+    @FindBy(xpath = "//div//label[@for='vote_checkbox_134_346'][2]")
     public WebElement answer1Text;
-    @FindBy(xpath = "//label[.='Answer 2']")
-    public WebElement answer2Text;
-    @FindBy(xpath = "//label[.='Answer 3']")
-    public WebElement answer3Text;
+    //label[.='Answer 1']
 
-    @FindBy(xpath = "(//input[@name='vote_checkbox_120[]'])[1]")
+    @FindBy(xpath = "//div//label[@for='vote_checkbox_134_347'][2]")
+    public WebElement answer2Text;
+    //label[.='Answer 2']
+    @FindBy(xpath = "//div//label[@for='vote_checkbox_134_348'][2]")
+    public WebElement answer3Text;
+    //label[.='Answer 3']
+
+    @FindBy(xpath = "//input[@name='vote_checkbox_134[]']")
     public WebElement answer1CheckBox;
+    //input[@name='vote_checkbox_134[]']
     //   (//input[@name='vote_checkbox_120[]'])[1]
     //span[@class='bx-vote-block-inp-substitute']
-    @FindBy(xpath = "(//input[@name='vote_checkbox_120[]'])[2]")
+    @FindBy(xpath = "(//input[@name='vote_checkbox_134[]'])[2]")
     public WebElement answer2CheckBox;
-    @FindBy(xpath = "(//input[@name='vote_checkbox_120[]'])[3]")
+    @FindBy(xpath = "(//input[@name='vote_checkbox_134[]'])[3]")
     public WebElement answer3CheckBox;
 
 
