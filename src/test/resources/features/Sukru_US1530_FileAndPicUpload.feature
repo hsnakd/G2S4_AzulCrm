@@ -11,7 +11,7 @@ Feature: Message Box File and Picture upload
 
 
 # 1. User should be able to upload multiple files at the same time (Test with max 3 files.).
-  @AZLC-1530
+  @AZLC-1552
   Scenario:   HR User should be able to upload multiple files at the same time (Test with max 3 files.).
 
     And user clicks upload button
@@ -27,7 +27,7 @@ Feature: Message Box File and Picture upload
 
 
  # 2. User should be able to upload files in different formats.
-  @AZLC-1530
+  @AZLC-1553
   Scenario:   HR User should be able to upload multiple files at the same time (Test with max 3 files.).
 
     And user clicks upload button
@@ -40,7 +40,7 @@ Feature: Message Box File and Picture upload
 
 
  # 3. User should be able to upload pictures.
-  @AZLC-1530
+  @AZLC-1554
   Scenario: HR User should be able to upload pictures
   And user clicks upload button
   And user clicks select from bitrix
@@ -53,7 +53,7 @@ Feature: Message Box File and Picture upload
 
 
  # 4. User should be able to display the uploaded picture itself in Activity Stream.
-  @AZLC-1530
+  @AZLC-1555
   Scenario: User should be able to display the uploaded picture itself in Activity Stream.
     And user clicks upload button
     And user clicks select from bitrix
@@ -66,7 +66,7 @@ Feature: Message Box File and Picture upload
 
  # 5. User should be able to insert the files and images into the text
 
-  @AZLC-1530
+  @AZLC-1556
   Scenario: User should be able to insert the files and images into the text.
     And user clicks upload button
     And user clicks select from bitrix
@@ -79,7 +79,7 @@ Feature: Message Box File and Picture upload
 
 
  # 6. User should be able to allow a recipient to edit documents.
-  @AZLC-1530
+  @AZLC-1557
   Scenario:   HR User should be able to allow a recipient to edit documents.
 
     And user clicks upload button
@@ -93,7 +93,7 @@ Feature: Message Box File and Picture upload
 
 
  # 7. User should be able to remove files and images at any time before sending.
-  @AZLC-1530
+  @AZLC-1559
   Scenario: User should be able to remove files and images at any time before sending.
     And user clicks upload button
     And user clicks select from bitrix
@@ -106,3 +106,11 @@ Feature: Message Box File and Picture upload
 
 
  # 8. User should be able to rename the file before sending it.
+  @AZLC-1558
+  Scenario: User should be able to rename the file before sending it.
+
+    And user clicks upload button
+    And user selects file to upload
+    And user points the mouse next to uploaded file
+    Then a pencil sign to edit the file should show up
+

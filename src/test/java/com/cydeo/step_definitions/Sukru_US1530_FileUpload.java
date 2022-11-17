@@ -7,6 +7,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 
 public class Sukru_US1530_FileUpload {
 
@@ -22,6 +24,7 @@ public class Sukru_US1530_FileUpload {
     public void userClicksUploadButton() {
         BrowserUtils.waitForVisibility(messageBox.upload,3);
         messageBox.upload.click();
+        BrowserUtils.waitFor(2);
     }
 
     @And("user clicks select from bitrix")
@@ -138,4 +141,23 @@ public class Sukru_US1530_FileUpload {
     }
 
 
+    @And("user selects file to upload")
+    public void userSelectsFileToUpload() {
+        BrowserUtils.waitFor(3);
+        messageBox.uploadFilesAndImagesButton.sendKeys("/Users/sukruozen/Desktop/Soft Skill/day02/SDLC continue note.txt"+ Keys.ENTER);
+    }
+
+    @And("user points the mouse next to uploaded file")
+    public void userPointsTheMouseNextToUploadedFile() {
+        BrowserUtils.waitFor(3);
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(messageBox.nameEditButton);
+
+    }
+
+    @Then("a pencil sign to edit the file should show up")
+    public void aPencilSignToEditTheFileShouldShowUp() {
+        BrowserUtils.waitFor(1);
+        Assert.assertTrue(messageBox.nameEditButton.isDisplayed());
+    }
 }
