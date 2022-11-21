@@ -30,8 +30,11 @@ public class Oguz_US1531_AddingMessagePage {
     @FindBy(id = "linkidPostFormLHE_blogPostForm-text")
     public WebElement linkTextBox;
 
-    @FindBy(xpath = "//input[@placeholder='Link URL']")
+    @FindBy(xpath = "//input[@id='video_idPostFormLHE_blogPostForm-source']")
     public WebElement linkUrlBox;
+
+    @FindBy(xpath = "//img[@class='bxhtmled-surrogate-dd']")
+    public WebElement videoElementInBody;
 
     @FindBy(xpath = "//input[@value='Save']")
     public WebElement saveLinkBtn;
@@ -96,8 +99,8 @@ public class Oguz_US1531_AddingMessagePage {
     @FindBy(xpath = "//body[@class='vsc-initialized']")
     public WebElement messageBody;
 
-    @FindBy(xpath = "(//div[.='helpdesk1@cybertekschool.com'])[3]")
-    public WebElement helpdesk1;
+    @FindBy(xpath = "(//div[.='helpdesk49@cybertekschool.com'])")
+    public WebElement helpdesk49;
 
     @FindBy(xpath = "//span[.='helpdesk1@cybertekschool.com']")
     public WebElement helpdesk1InBody;
