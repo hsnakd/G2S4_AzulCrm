@@ -17,7 +17,7 @@ Feature: Message Function
     When user clicks message button
 
 
-  @AZLC-1580
+  @AZLC-1580  @smoke
   Scenario: user should be able to add mentions about only department employees
     When  user remove All employees that writing by default
     And   user click the mention button
@@ -35,7 +35,7 @@ Feature: Message Function
     And  user click save button
     Then message body contain link text
 
-#this acceptance criteria has a bug Therefore Automation has not done.
+
   @AZLC-1581
   Scenario:  User should be able to insert YouTube and Vimeo video.
     When user click insert video button
