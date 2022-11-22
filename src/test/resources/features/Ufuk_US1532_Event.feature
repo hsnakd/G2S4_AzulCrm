@@ -1,4 +1,4 @@
-@AZLC-1532,@wip1
+@AZLC-1532
 Feature: AzulCrm Event Create
   User Story :  As a user, I should be able to create events by clicking on Event tab under Activity Stream.
 
@@ -17,7 +17,7 @@ Feature: AzulCrm Event Create
     When  user clicks event button
 
 
-  @AC1-TC1,@wip1
+  @AC1-TC1
   Scenario Outline: User should be able to add Event start and end date and time
     When  user clicks on Event start date and select a day   "<startdate>"
     And   user clicks on Event start time and select a time  "<starttime>"
@@ -31,12 +31,12 @@ Feature: AzulCrm Event Create
 
 
 
-  @AC1-TC2,@wip1
+  @AC1-TC2
    Scenario: User should be able to select All day
     When   user clicks on All day checkbox
     Then  verify that All day is selected
 
-   @AC1-TC3,@wip1
+   @AC1-TC3
    Scenario Outline: User should be able to specify the time zone
     When   user clicks on Specify time zone link
     And    user clicks and select time zone1  "<zone1>"
@@ -48,7 +48,7 @@ Feature: AzulCrm Event Create
        | (UTC +02:00) Europe/Helsinki   |(UTC +02:00) Europe/Vilnius |
 
 
-  @AC2,@wip1
+  @AC2
   Scenario Outline: User should be able to set reminder
     When  user clicks on count inputbox and enter count  "<count>"
     And   user clicks on timeunit dropdown and select timeunit "<timeunit>"
@@ -61,7 +61,7 @@ Feature: AzulCrm Event Create
       | 1                               | days                       |
 
 
-  @AC3,@wip1
+  @AC3
   Scenario Outline: User should be able to select the event location from the dropdown
     When  user cliks on Event Location dropdown and select a room  "<room>"
     Then  verify that meeting room is selected
@@ -74,7 +74,7 @@ Feature: AzulCrm Event Create
 
 
 
-  @AC4,@wip1
+  @AC4
   Scenario Outline: User should be able to add members by selecting contacts individually or adding groups and departments
     When  user clicks on Members inputbox and enter a username "<usernam>"
     And   user clicks on Members inputbox and enter a groupname  "<groupname>"
@@ -87,7 +87,7 @@ Feature: AzulCrm Event Create
 
 
 
-  @AC5,@wip1
+  @AC5
   Scenario Outline: User should be able to send messages by filling the mandatory fields
     When  user clicks on Event name  inputbox and enter a name  "<eventname>"
     And   user clicks on Send button
@@ -98,7 +98,7 @@ Feature: AzulCrm Event Create
       | Sprint planning       | Sprint planning  |
 
 
-  @AC6,@wip1
+  @AC6
   Scenario: User should be able to cancel sending event at any time before sending
     When  user clicks on Cancel Button
     Then  verify that Event is cancelled
