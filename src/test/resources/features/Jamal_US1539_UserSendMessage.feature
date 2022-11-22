@@ -1,53 +1,41 @@
 @AZLC-1539
-Feature: Quick Navigate Menu feature
+Feature: Message sending
   User Story :
-  As a user, I should be able to assign tasks under Quick Navigate Menu.
+  As a user, I should be able to send messages by clicking on Message tab under Active Stream.
 
 
   Background: log in page feature
     Given users log in with valid credentials as a "hr"
 
-
-   # When Click the TASK on the Quick Navigate Menu
-
-
-
-
-
-
-
-
-# 1. HR User should be able to create a "High priority" tasks with the mandatory fields.
-  @AZLC-1540
-  Scenario:   HR User should be able to create a "High priority" tasks with the mandatory fields.
-    And  Click High Priority checkbox
-    And Write Task Name in the Things to do box
-    And  Write a message in the message box
-    And  Add an employee name to the Responsible person section
-    And  Click on the send button to send the task
-    And  Click the TASK on the left side menu
-    Then Verify if the task is high priority
+  @AZLC-1595
+  Scenario: User should be able to send a message by filling in the mandatory fields.
+    And Navigate to Activity Stream
+    And Navigate to Message Tab on the activity Stream
+    And Type your Message
+    When Click on Send button
+    Then See your Message below
 
 
+  @AZLC-1596
+  Scenario: The message delivery should be to 'All employees' by default and should be changeable.
+    And Navigate to Activity Stream.
+    And Navigate to Message Tab on the activity Stream
+    And Type your Message
+    When Click on Send button
+    Then See your Message below
 
-#  2. HR User should be able to assign a task to more than one user (Test with adding 3 users max.)
-  @AZLC-1541
-  Scenario:   HR User should be able to create a "High priority" tasks with the mandatory fields.
-    And  Click High Priority checkbox
-    And Write Task Name in the Things to do box
-    And  Write a message in the message box
-    And  Add an employee name to the Responsible person section
-    And  Click on the send button to send the task
-    And  Click the TASK on the left side menu
-    Then Verify if the task is high priority
+  @AZLC-1597
+  Scenario: User should be able to cancel sending messages at any time before sending.
+    And Navigate to Activity Stream.
+    And Navigate to Message Tab on the activity Stream
+    And Type your Message
+    When Click on Cancel button
+    Then Message is not sent
 
-#  3. When task(s) is(are) created, they can be seen on the count on the homepage under "MY TASKS" table.
-
-
-#  4. Checklist should be able to be added while creating a task.
-
-
-#  5. Deadline should be able to be added while creating a task.
-
-
-#  6. Time planning function should be able to be used in the setting of deadline.
+  @AZLC-1598
+  Scenario: User should be able to delete messages after sending.
+    And Navigate to Activity Stream.
+    And Navigate to Message Tab on the activity Stream
+    And Find last sent message
+    When Click on Delete button
+    Then Message has been deleted
