@@ -8,7 +8,7 @@ Feature: Poll tab feature
     Given users log in with valid credentials as a "hr"
 
 
-  @AZLC-1533   @TC1
+  @AZLC-1533   @TC1 @smoke
   Scenario:     [TC1] - Verify that user can add users by selecting multiple contacts from Employees and Departments contacts list.
   [AC1] - User should be able to add users by selecting multiple contacts from Employees and Department's contact lists.
     Given click on the poll tab on the tab-menu
@@ -20,7 +20,7 @@ Feature: Poll tab feature
 
 
 
-  @AZLC-1533   @TC2
+  @AZLC-1533   @TC2 @smoke
   Scenario:     [TC2] - Verify that user can add questions and multiple answers
   [AC2] - User should be able to add questions and multiple answers
     Given click on the poll tab on the tab-menu
