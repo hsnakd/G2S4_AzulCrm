@@ -11,7 +11,7 @@ Feature: Quick Navigate Menu feature
 
 # 1. HR User should be able to create a "High priority" tasks with the mandatory fields.
 
-  @AZLC-1544
+  @AZLC-1544 @smoke
   Scenario:   HR User should be able to create a "High priority" tasks with the mandatory fields.
     And Click High Priority checkbox
     And Write Task Name in the Things to do box
