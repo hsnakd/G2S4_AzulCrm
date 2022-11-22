@@ -7,6 +7,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 
 public class Oguz_US1531_AddingMessage {
     Oguz_US1531_AddingMessagePage messagePage = new Oguz_US1531_AddingMessagePage();
@@ -35,7 +36,7 @@ public class Oguz_US1531_AddingMessage {
     @And("user select any user")
     public void userSelectAnyUser() {
        // BrowserUtils.sleep(2);
-        messagePage.helpdesk1.click();
+        messagePage.helpdesk49.click();
     }
 
     @Then("user should see selected user in the message body")
@@ -65,7 +66,7 @@ public class Oguz_US1531_AddingMessage {
     public void userClickSaveButton() {
         BrowserUtils.sleep(2);
         messagePage.saveLinkBtn.click();
-        System.out.println("save btn click");
+
     }
 
     @Then("message body contain link text")
@@ -82,22 +83,30 @@ public class Oguz_US1531_AddingMessage {
     @When("user click insert video button")
     public void userClickInsertVideoButton() {
         messagePage.insertVideBtn.click();
+        BrowserUtils.sleep(3);
     }
 
     @And("user click video source button")
     public void userClickVideoSourceButton() {
-       // BrowserUtils.waitForVisibility(messagePage.linkUrlBox,10);
-        messagePage.linkUrlBox.click();
+
+        messagePage.linkUrlBox.sendKeys("https://vimeo.com/757945187");
+
+
+
+
+
+        BrowserUtils.sleep(5);
     }
 
     @And("user enter valid video URL")
     public void userEnterValidVideoURL() {
-        messagePage.linkUrlBox.sendKeys("https://vimeo.com/757945187");
-        BrowserUtils.sleep(3);
     }
 
     @Then("message body contain video link")
     public void messageBodyContainVideoLink() {
+        Driver.getDriver().switchTo().frame(messagePage.messageBodyIframe);
+        BrowserUtils.verifyElementDisplayed(messagePage.videoElementInBody);
+
 
     }
 

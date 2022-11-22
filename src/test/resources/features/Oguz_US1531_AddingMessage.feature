@@ -1,3 +1,4 @@
+@wip
 Feature: Message Function
 
   User Story: I should be able to add link, insert video, mention, quote, add tag in message
@@ -16,7 +17,7 @@ Feature: Message Function
     When user clicks message button
 
 
-  @AC1
+  @AZLC-1580
   Scenario: user should be able to add mentions about only department employees
     When  user remove All employees that writing by default
     And   user click the mention button
@@ -26,16 +27,16 @@ Feature: Message Function
     Then  user should see selected user in the message body
 
 
-  @AC2
+  @AZLC-1582
   Scenario: User should be able to attach link to specified text.
     When user click link button
     And  user write text name
     And  user write text link
-    And user click save button
+    And  user click save button
     Then message body contain link text
 
-
-  @AC3
+#this acceptance criteria has a bug Therefore Automation has not done.
+  @AZLC-1581
   Scenario:  User should be able to insert YouTube and Vimeo video.
     When user click insert video button
     And user click video source button
@@ -44,14 +45,14 @@ Feature: Message Function
     Then message body contain video link
 
 
-  @AC4
+  @AZLC-1583
   Scenario:  User should be able to add quotes.
     When  user click add quotes button
     And   user write something in there
     Then  user should see the quote in the text body
 
 
-  @AC5
+  @AZLC-1584
   Scenario: User should be able to add tags in message.
     When user click the add tag button
     And  user write enter any string
@@ -59,7 +60,7 @@ Feature: Message Function
     Then user should see the tag in the tag area
 
 
-  @AC6
+  @AZLC-1585
   Scenario: User should be able to remove tags before sending the message
     When user click the add tag button
     And  user write enter any string
