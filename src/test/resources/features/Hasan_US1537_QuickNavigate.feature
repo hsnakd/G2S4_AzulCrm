@@ -22,7 +22,7 @@ Feature: Quick Navigate Menu feature
     Then Verify if the task is high priority
 
 
-  @AZLC-1545  @smoke
+  @AZLC-1545
 #  2. HR User should be able to assign a task to more than one user (Test with adding 3 users max.)
   Scenario: HR User should be able to assign a task to more than one user
     And Write Task Name in the Things to do box
@@ -44,7 +44,7 @@ Feature: Quick Navigate Menu feature
     Then Verify that task is created under MY TASKS table
 
 
-  @AZLC-1547
+  @AZLC-1547 @smoke
 #  4. Checklist should be able to be added while creating a task.
   Scenario: Checklist should be able to be added while creating a task
     And Write Task Name in the Things to do box
