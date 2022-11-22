@@ -82,4 +82,11 @@ public class Sukru_US1530_File_UploadPage {
     @FindBy(xpath = "//*[@id=\"disk-edit-attachn2295\"]/td[5]/span")
     public WebElement deleteAttachedFileButton;
 
+    @FindBy(xpath = "(//span[.='Drag files here to upload'])[2]")
+    public WebElement uploadFilesAndImagesButton;
+
+    @FindBy(css = "#disk-edit-attachn2326 > td.files-name > span.files-text > span.files-name-edit-btn")
+    public WebElement nameEditButton;
+
+
 }
