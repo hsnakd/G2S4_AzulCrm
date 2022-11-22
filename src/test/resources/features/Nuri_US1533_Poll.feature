@@ -54,7 +54,7 @@ Feature: Poll tab feature
     Then verify that  checkboxes are enabled next to answers
 
 
-  @AZLC-1533   @TC5  @wip
+  @AZLC-1533   @TC5
   Scenario:   [TC5] - Verify that user can generate a new poll with mandatory fields.
   [AC5] - User should be able to open a new poll with mandatory fields.
 
