@@ -112,7 +112,7 @@ public class Ufuk_US1532_Event {
 
     }
 
-     //@AC2
+     // @AC2
     @When("user clicks on count inputbox and enter count  {string}")
     public void user_clicks_on_count_inputbox_and_enter_count(String string) {
 
