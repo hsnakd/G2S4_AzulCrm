@@ -11,7 +11,7 @@ Feature: Message Box File and Picture upload
 
 
 # 1. User should be able to upload multiple files at the same time (Test with max 3 files.).
-  @AZLC-1552
+  @AZLC-1552 @smoke
   Scenario:   HR User should be able to upload multiple files at the same time (Test with max 3 files.).
 
     And user clicks upload button
