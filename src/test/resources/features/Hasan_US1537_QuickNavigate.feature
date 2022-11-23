@@ -22,7 +22,7 @@ Feature: Quick Navigate Menu feature
     Then Verify if the task is high priority
 
 
-  @AZLC-1545
+  @AZLC-1545  @smoke
 #  2. HR User should be able to assign a task to more than one user (Test with adding 3 users max.)
   Scenario: HR User should be able to assign a task to more than one user
     And Write Task Name in the Things to do box
