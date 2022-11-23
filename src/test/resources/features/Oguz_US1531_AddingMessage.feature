@@ -17,7 +17,7 @@ Feature: Message Function oguz
     When user clicks message button
 
 
-  @AZLC-1580  @smoke
+  @AZLC-1580
   Scenario: user should be able to add mentions about only department employees
     When  user remove All employees that writing by default
     And   user click the mention button
@@ -60,7 +60,7 @@ Feature: Message Function oguz
     Then user should see the tag in the tag area
 
 
-  @AZLC-1585
+  @AZLC-1585  @smoke
   Scenario: User should be able to remove tags before sending the message
     When user click the add tag button
     And  user write enter any string
