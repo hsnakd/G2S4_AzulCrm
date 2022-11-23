@@ -125,4 +125,13 @@ public class Hasan_US1537_QuickNavigateTaskPage {
     @FindBy(xpath = "//div[.='Start:']/following-sibling::div")
     public WebElement checkStartTimePlanningAdded;
 
+
+
+
+    @FindBy(xpath = "//span[@class='menu-item-link-text']")
+    public WebElement activityStream;
+
+    @FindBy(xpath = "//table[@class='main-grid-panel-table']//tr/td[2]//span[2]")
+    public WebElement count;
+
 }
