@@ -50,11 +50,19 @@ public class Oguz_US1531_AddingMessage {
 
     @And("user write text link")
     public void userWriteTextLink() {
-        messagePage.linkUrlBox.sendKeys("https://docs.google.com/document/d/1WngspGGhOBrJDjmbXVQsIQVs386ca2121IbEqJmq1bw/edit");
+        BrowserUtils.waitForClickability(messagePage.linkUrlBox,10);
+        messagePage.linkUrlBox.click();
+         messagePage.linkUrlBox.sendKeys("https://docs.google.com/document/d/1WngspGGhOBrJDjmbXVQsIQVs386ca2121IbEqJmq1bw/edit");
+
     }
 
     @And("user click save button")
     public void userClickSaveButton() {
+        BrowserUtils.waitForClickability(messagePage.saveLinkBtn,10);
+        messagePage.saveLinkBtn.click();
+    }
+    @And("user click save button for Insert Video")
+    public void userClickSaveButtonForInsertVideo() {
         BrowserUtils.waitForVisibility(messagePage.videoTitle,10);
         messagePage.saveLinkBtn.click();
     }
@@ -73,7 +81,7 @@ public class Oguz_US1531_AddingMessage {
     }
     @And("user enter video url to source button")
     public void userClickVideoSourceButton() {
-        messagePage.linkUrlBox.sendKeys("https://vimeo.com/757945187");
+        messagePage.linkUrlBoxForVideo.sendKeys("https://vimeo.com/757945187");
         BrowserUtils.sleep(3);
     }
     @Then("message body contain video link")

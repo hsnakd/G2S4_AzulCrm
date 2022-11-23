@@ -1,4 +1,4 @@
-
+@oguz
 Feature: Message Function oguz
 
   User Story: I should be able to add link, insert video, mention, quote, add tag in message
@@ -40,7 +40,7 @@ Feature: Message Function oguz
   Scenario:  User should be able to insert YouTube and Vimeo video.
     When user click insert video button
     And user enter video url to source button
-    And user click save button
+    And user click save button for Insert Video
     Then message body contain video link
 
 
