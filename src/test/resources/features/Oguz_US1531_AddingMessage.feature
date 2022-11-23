@@ -39,8 +39,7 @@ Feature: Message Function oguz
   @AZLC-1581
   Scenario:  User should be able to insert YouTube and Vimeo video.
     When user click insert video button
-    And user click video source button
-    And user enter valid video URL
+    And user enter video url to source button
     And user click save button
     Then message body contain video link
 
