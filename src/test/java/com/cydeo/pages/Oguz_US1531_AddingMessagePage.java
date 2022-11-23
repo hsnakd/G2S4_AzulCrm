@@ -112,5 +112,9 @@ public class Oguz_US1531_AddingMessagePage {
     public WebElement childOfTagBtn;
 
 
+    @FindBy(xpath = "//label[.='Video title:']")
+    public WebElement videoTitle;
+
+
 
 }
