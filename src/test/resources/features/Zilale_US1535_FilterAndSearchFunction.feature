@@ -1,4 +1,5 @@
 @AZLC-1535 @
+#noinspection CucumberUndefinedStep
 Feature: Filter and search function feature
   User Story :
   As a user, I should be able to use "Filter and search" functionality on Active Stream.
@@ -11,10 +12,8 @@ Feature: Filter and search function feature
   #1. User should be able to see default filters as "my activity, work, favorite,announcements, and workflows"
   @AZLC-1587
   Scenario: User should be able to see default filters as "my activity, work, favorite,announcements, and workflows"
-
   When User clicks the Filter and search on the active stream
   Then Verify that user should be able to click Filter and search functionality on the Active Stream
-
 
 
   #2. User should be able to add and remove fields.
