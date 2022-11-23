@@ -49,7 +49,7 @@ public class Ufuk_US1532_EventPage {
     public WebElement remindCount;
 
 
-    @FindBy(xpath ="//input[@name='EVENT_REMIND_COUNT']")
+    @FindBy(xpath ="//select[@name='EVENT_REMIND_TYPE']")
     public WebElement remindUnit;
 
 
