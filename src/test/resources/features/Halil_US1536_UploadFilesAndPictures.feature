@@ -1,7 +1,7 @@
 @AZLC-1536
-Feature: Quick Navigate Menu feature
+Feature: Upload files
   User Story :
-  As a user, I should be able to assign tasks under Quick Navigate Menu.
+  As a user, I should be able to upload files
 
 
   Background: log in page feature
