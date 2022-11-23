@@ -1,5 +1,5 @@
-@wip
-Feature: Message Function
+
+Feature: Message Function oguz
 
   User Story: I should be able to add link, insert video, mention, quote, add tag in message
 
