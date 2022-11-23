@@ -13,6 +13,9 @@ public class Hasan_US1537_QuickNavigateTask {
     Hasan_US1537_QuickNavigateTaskPage taskPage = new Hasan_US1537_QuickNavigateTaskPage();
     String taskName = "US-1537_TC-01";
     String thingsToDo = "US-1537 TC-04 Things To Do";
+    int countBefore;
+    int countAfter;
+
 
     @When("Click the TASK on the Quick Navigate Menu")
     public void click_the_task_on_the_quick_navigate_menu() {
@@ -88,11 +91,26 @@ public class Hasan_US1537_QuickNavigateTask {
     }
 
 
+    @And("Check task number")
+    public void checkTaskNumber() {
+        taskPage.taskLeftSide.click();
+        countBefore = Integer.parseInt(taskPage.count.getText());
+
+        BrowserUtils.waitFor(2);
+        taskPage.activityStream.click();
+        BrowserUtils.waitFor(2);
+        taskPage.taskLink.click();
+
+    }
+
     @Then("Verify that task is created under MY TASKS table")
     public void verifyThatTaskIsCreatedUnderMYTASKSTable() {
-        String expectedText = taskName;
-        String actualText = taskPage.taskName.getText();
-        Assert.assertEquals(expectedText,actualText);
+        countAfter = Integer.parseInt(taskPage.count.getText());
+//        System.out.println("countBefore = " + countBefore);
+//        System.out.println("countAfter = " + countAfter);
+
+        Assert.assertNotEquals(countBefore, countAfter);
+        Assert.assertEquals(countBefore, countAfter-1);
     }
 
     @And("Click Checklist link")
