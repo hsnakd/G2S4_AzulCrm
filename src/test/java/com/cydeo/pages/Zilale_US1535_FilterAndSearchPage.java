@@ -60,6 +60,38 @@ public class Zilale_US1535_FilterAndSearchPage {
     public WebElement resetFunction;
 
 
+    //3
+    @FindBy(xpath = "//div[@data-name='DATE_CREATE_datesel']")
+    public WebElement dateDropdown;
+
+    //4
+    @FindBy(xpath = "//div[@class='main-ui-control main-ui-multi-select']")
+    public WebElement typeDropdown;
+
+    //5
+    @FindBy(xpath = "//span[@class='main-ui-filter-add-item']")
+    public WebElement saveFilterFunction;
+
+    @FindBy(xpath = "//input[@class='main-ui-filter-sidebar-edit-control']")
+    public WebElement setFilterName;
+
+    @FindBy(xpath = "//span[@class='ui-btn ui-btn-success main-ui-filter-field-button main-ui-filter-save']")
+    public WebElement saveFilterName;
+
+    //6
+    @FindBy(xpath = "//span[@class='main-ui-filter-field-restore-items']")
+    public WebElement restoreFields;
+
+
+    //7
+    @FindBy(xpath = "//span[@class='main-ui-filter-add-edit']")
+    public WebElement configureFilterFunction;
+
+    @FindBy(xpath = "//span[@class='main-ui-filter-field-button-item']")
+    public WebElement resetToDefaultFunction;
+
+    @FindBy(xpath = "//span[.='Continue']")
+    public WebElement continuePopup;
 
 
 

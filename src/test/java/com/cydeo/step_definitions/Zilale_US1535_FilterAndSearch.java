@@ -1,21 +1,24 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 
 public class Zilale_US1535_FilterAndSearch {
     
     
-    //User should be able to see default filters as "my activity, work, favorite,announcements, and workflows"
+    //1.User should be able to see default filters as "my activity, work, favorite,announcements, and workflows"
     @When("User clicks the Filter and search on the active stream")
     public void userClicksTheFilterAndSearchOnTheActiveStream() {
-        
     }
 
-    @Then("Verify that user should be able to click Filter and search functionality on the Active Stream")
-    public void verifyThatUserShouldBeAbleToClickFilterAndSearchFunctionalityOnTheActiveStream() {
+    @Then("Verify that user should see default filters as my activity,work,favorite,announcement,workflows")
+    public void verifyThatUserShouldSeeDefaultFiltersAsMyActivityWorkFavoriteAnnouncementWorkflows() {
     }
+
+
 
     //2. User should be able to add and remove fields.
     @When("User clicks Add field function")
@@ -52,11 +55,6 @@ public class Zilale_US1535_FilterAndSearch {
         
     }
 
-    @And("Clicks each options to make sure it works")
-    public void clicksEachOptionsToMakeSureItWorks() {
-        
-    }
-
     @Then("Verify that search by specifying the Date is working")
     public void verifyThatSearchBySpecifyingTheDateIsWorking() {
         
@@ -65,11 +63,6 @@ public class Zilale_US1535_FilterAndSearch {
     //4.User should be able to search by selecting single or multiple types,
     @When("User selects one or more options in the type function")
     public void userSelectsOneOrMoreOptionsInTheTypeFunction() {
-    }
-
-    @And("User clicks each types of options")
-    public void userClicksEachTypesOfOptions() {
-        
     }
 
     @Then("Verify that search by selecting single and multiple types")
@@ -128,4 +121,6 @@ public class Zilale_US1535_FilterAndSearch {
     @Then("Verify that user should be able to reset filters to default")
     public void verifyThatUserShouldBeAbleToResetFiltersToDefault() {
     }
+
+
 }
