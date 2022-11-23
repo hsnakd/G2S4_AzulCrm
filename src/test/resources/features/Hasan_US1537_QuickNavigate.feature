@@ -36,6 +36,7 @@ Feature: Quick Navigate Menu feature
   @AZLC-1546
 #  3. When task(s) is(are) created, they can be seen on the count on the homepage under "MY TASKS" table.
   Scenario: When task is created, it can be seen on the count on the homepage under "MY TASKS" table
+    And Check task number
     And Write Task Name in the Things to do box
     And Write a message in the message box
     And Add an employee name to the Responsible person section
@@ -44,7 +45,7 @@ Feature: Quick Navigate Menu feature
     Then Verify that task is created under MY TASKS table
 
 
-  @AZLC-1547
+  @AZLC-1547 @smoke
 #  4. Checklist should be able to be added while creating a task.
   Scenario: Checklist should be able to be added while creating a task
     And Write Task Name in the Things to do box

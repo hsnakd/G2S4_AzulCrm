@@ -105,6 +105,11 @@ public class Oguz_US1531_AddingMessagePage {
     @FindBy(xpath = "//span[.='helpdesk1@cybertekschool.com']")
     public WebElement helpdesk1InBody;
 
+    @FindBy(xpath = "//span[@class='feed-add-post-tags-add']")
+    public WebElement addMoreTagBtn;
+
+    @FindBy(xpath = "//div[@class='feed-add-post-tags-wrap']/span")
+    public WebElement childOfTagBtn;
 
 
 
