@@ -1,5 +1,5 @@
 @AZLC-1536
-Feature: Upload files
+Feature: Upload files while sending appreciation
   User Story :
   As a user, I should be able to upload files
 
