@@ -27,6 +27,7 @@ Feature: Message Function oguz
     Then  user should see selected user in the message body
 
 
+
   @AZLC-1582
   Scenario: User should be able to attach link to specified text.
     When user click link button

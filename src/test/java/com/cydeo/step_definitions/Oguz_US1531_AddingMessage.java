@@ -17,19 +17,24 @@ public class Oguz_US1531_AddingMessage {
     @When("user remove All employees that writing by default")
     public void user_remove_all_employees_that_writing_by_default() {
         messagePage.allEmployeesCross.click();
+        BrowserUtils.sleep(2);
+
     }
     @When("user click the mention button")
     public void user_click_the_button() {
         messagePage.mentionBtn.click();
+        BrowserUtils.sleep(2);
     }
     @When("user click the Employees and department button")
     public void user_click_the_employees_and_department_button() {
        // BrowserUtils.sleep(3);
         messagePage.addEmployeesAndDepartments.click();
+        BrowserUtils.sleep(2);
     }
     @When("user click group2.2")
     public void user_click() {
         messagePage.group2_2.click();
+        BrowserUtils.sleep(2);
     }
 
 
@@ -37,11 +42,13 @@ public class Oguz_US1531_AddingMessage {
     public void userSelectAnyUser() {
        // BrowserUtils.sleep(2);
         messagePage.helpdesk49.click();
+        BrowserUtils.sleep(2);
     }
 
     @Then("user should see selected user in the message body")
     public void userShouldSeeSelectedUserInTheMessageBody() {
         messagePage.helpdesk1InBody.isDisplayed();
+        BrowserUtils.sleep(2);
     }
 
     //---AC2---------------------------------------------------------------
