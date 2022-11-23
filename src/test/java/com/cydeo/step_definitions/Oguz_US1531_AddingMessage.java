@@ -90,12 +90,7 @@ public class Oguz_US1531_AddingMessage {
     public void userClickVideoSourceButton() {
 
         messagePage.linkUrlBox.sendKeys("https://vimeo.com/757945187");
-
-
-
-
-
-        BrowserUtils.sleep(5);
+        BrowserUtils.sleep(3);
     }
 
     @And("user enter valid video URL")
@@ -163,13 +158,16 @@ public class Oguz_US1531_AddingMessage {
 
     @And("user remove the tag")
     public void userRemoveTheTag() {
+        System.out.println(messagePage.childOfTagBtn.getText());
         messagePage.crossOnTag.click();
         BrowserUtils.sleep(3);
     }
 
     @Then("tag is removed in the tag area")
     public void tagIsRemovedInTheTagArea() {
-        //Assert.assertTrue(messagePage.tagsArea);
+
+        Assert.assertEquals("Add more",messagePage.childOfTagBtn.getText());
+
     }
 
 
