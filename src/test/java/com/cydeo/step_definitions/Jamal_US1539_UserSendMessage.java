@@ -36,6 +36,8 @@ public class Jamal_US1539_UserSendMessage {
 
     @When("Click on Send button")
     public void click_on_send_button() {
+        BrowserUtils.waitFor(2);
+
         messagePage.messageSendButton.click();
         BrowserUtils.waitFor(2);
 
@@ -43,7 +45,7 @@ public class Jamal_US1539_UserSendMessage {
 
     @Then("See your Message below")
     public void see_your_message_below() {
-
+        BrowserUtils.waitFor(2);
         String messageID = Driver.getDriver().findElement(By.className("feed-post-text-block-inner-inner")).getAttribute("id");
         System.out.println(messageID);
         Assert.assertEquals(Driver.getDriver().findElement(By.id(messageID)).getText(), message);
@@ -59,8 +61,11 @@ public class Jamal_US1539_UserSendMessage {
     @When("Find on Sender All employees")
     public void findOnSenderAllEmployees() {
 
+        messagePage.messageAreaClick.click();
+        BrowserUtils.waitFor(2);
         Driver.getDriver().switchTo().frame(0);
         Driver.getDriver().switchTo().parentFrame();
+        BrowserUtils.waitFor(2);
 
     }
 
