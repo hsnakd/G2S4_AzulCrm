@@ -1,4 +1,4 @@
-@AZLC-1535
+@AZLC-1535 @AZLC-1594
 
 Feature: Filter and search function feature
   User Story :
