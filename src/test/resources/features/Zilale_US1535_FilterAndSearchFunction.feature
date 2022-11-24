@@ -1,4 +1,4 @@
-@AZLC-1535 @
+@AZLC-1535
 
 Feature: Filter and search function feature
   User Story :
@@ -17,7 +17,7 @@ Feature: Filter and search function feature
 
 
   #2. User should be able to add and remove fields.
-  @AZLC-1588
+  @AZLC-1588 @smoke
   Scenario: User should be able to add and remove fields.
   When User clicks Add field function
   And Clicks Data,Type,Author,To functions to remove fields
