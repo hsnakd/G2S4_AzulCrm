@@ -7,7 +7,7 @@ Feature: Message sending
   Background: log in page feature
     Given users log in with valid credentials as a "hr"
 
-  @AZLC-1595  #passed
+  @AZLC-1595 @smoke  #passed
   Scenario: User should be able to send a message by filling in the mandatory fields.
     And Type your Message
     When Click on Send button
