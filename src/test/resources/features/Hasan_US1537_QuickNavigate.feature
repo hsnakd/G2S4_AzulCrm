@@ -1,5 +1,5 @@
 @AZLC-1537
-Feature: Quick Navigate Menu feature
+Feature: Quick Navigate Menu Task feature
   User Story :
   As a user, I should be able to assign tasks under Quick Navigate Menu.
 
