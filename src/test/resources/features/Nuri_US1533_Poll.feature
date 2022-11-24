@@ -20,7 +20,7 @@ Feature: Poll tab feature
 
 
 
-  @AZLC-1533   @TC2
+  @AZLC-1533   @TC2 @smoke
   Scenario:     [TC2] - Verify that user can add questions and multiple answers
   [AC2] - User should be able to add questions and multiple answers
     Given click on the poll tab on the tab-menu
@@ -31,7 +31,7 @@ Feature: Poll tab feature
 
 
 
-  @AZLC-1533   @TC3  @smoke
+  @AZLC-1533   @TC3
   Scenario:      [TC3] - Verify that user can delete questions and multiple answers
 [AC3] - User should be able to delete questions and multiple answers.
     Given click on the poll tab on the tab-menu
