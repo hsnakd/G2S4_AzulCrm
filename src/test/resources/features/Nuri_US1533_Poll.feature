@@ -20,7 +20,7 @@ Feature: Poll tab feature
 
 
 
-  @AZLC-1533   @TC2 @smoke
+  @AZLC-1533   @TC2  @smoke
   Scenario:     [TC2] - Verify that user can add questions and multiple answers
   [AC2] - User should be able to add questions and multiple answers
     Given click on the poll tab on the tab-menu
