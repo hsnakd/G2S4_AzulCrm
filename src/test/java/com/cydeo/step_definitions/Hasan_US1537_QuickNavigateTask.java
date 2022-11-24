@@ -13,6 +13,9 @@ public class Hasan_US1537_QuickNavigateTask {
     Hasan_US1537_QuickNavigateTaskPage taskPage = new Hasan_US1537_QuickNavigateTaskPage();
     String taskName = "US-1537_TC-01";
     String thingsToDo = "US-1537 TC-04 Things To Do";
+    int countBefore;
+    int countAfter;
+
 
     @When("Click the TASK on the Quick Navigate Menu")
     public void click_the_task_on_the_quick_navigate_menu() {
@@ -70,7 +73,8 @@ public class Hasan_US1537_QuickNavigateTask {
     @Then("Verify the task is assigned more than one user")
     public void verify_the_task_is_assigned_more_than_one_user() {
         taskPage.taskName.click();
-//        BrowserUtils.waitFor(5);
+
+        BrowserUtils.waitFor(2);
 
         Driver.getDriver().switchTo().frame(2);
 
@@ -80,19 +84,37 @@ public class Hasan_US1537_QuickNavigateTask {
         String expectedSecondPeopleCheck = "marketing99@cybertekschool.com";
         String actualSecondPeopleCheck = taskPage.addSecondPeopleCheck.getText();
 
+        BrowserUtils.waitFor(2);
 
         Assert.assertEquals(expectedPeopleCheck, actualPeopleCheck);
+
+        BrowserUtils.waitFor(2);
+
         Assert.assertEquals(expectedSecondPeopleCheck, actualSecondPeopleCheck);
 
 
     }
 
 
+    @And("Check task number")
+    public void checkTaskNumber() {
+        taskPage.taskLeftSide.click();
+        countBefore = Integer.parseInt(taskPage.count.getText());
+
+        BrowserUtils.waitFor(2);
+        taskPage.activityStream.click();
+        BrowserUtils.waitFor(2);
+        taskPage.taskLink.click();
+
+    }
+
     @Then("Verify that task is created under MY TASKS table")
     public void verifyThatTaskIsCreatedUnderMYTASKSTable() {
-        String expectedText = taskName;
-        String actualText = taskPage.taskName.getText();
-        Assert.assertEquals(expectedText,actualText);
+        countAfter = Integer.parseInt(taskPage.count.getText());
+//        System.out.println("countBefore = " + countBefore);
+//        System.out.println("countAfter = " + countAfter);
+
+        Assert.assertNotEquals(countBefore, countAfter);
     }
 
     @And("Click Checklist link")

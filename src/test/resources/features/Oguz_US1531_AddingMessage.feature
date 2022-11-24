@@ -1,5 +1,5 @@
-@wip
-Feature: Message Function
+@oguz
+Feature: Message Function oguz
 
   User Story: I should be able to add link, insert video, mention, quote, add tag in message
 
@@ -35,13 +35,12 @@ Feature: Message Function
     And  user click save button
     Then message body contain link text
 
-#this acceptance criteria has a bug Therefore Automation has not done.
+
   @AZLC-1581
   Scenario:  User should be able to insert YouTube and Vimeo video.
     When user click insert video button
-    And user click video source button
-    And user enter valid video URL
-    And user click save button
+    And user enter video url to source button
+    And user click save button for Insert Video
     Then message body contain video link
 
 
@@ -60,7 +59,7 @@ Feature: Message Function
     Then user should see the tag in the tag area
 
 
-  @AZLC-1585
+  @AZLC-1585  @smoke
   Scenario: User should be able to remove tags before sending the message
     When user click the add tag button
     And  user write enter any string

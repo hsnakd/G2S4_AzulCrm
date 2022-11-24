@@ -30,8 +30,11 @@ public class Oguz_US1531_AddingMessagePage {
     @FindBy(id = "linkidPostFormLHE_blogPostForm-text")
     public WebElement linkTextBox;
 
-    @FindBy(xpath = "//input[@id='video_idPostFormLHE_blogPostForm-source']")
+    @FindBy(xpath = "//input[@placeholder='Link URL']")
     public WebElement linkUrlBox;
+
+    @FindBy(xpath = "//input[@placeholder='YouTube or Vimeo video URL']")
+    public WebElement linkUrlBoxForVideo;
 
     @FindBy(xpath = "//img[@class='bxhtmled-surrogate-dd']")
     public WebElement videoElementInBody;
@@ -105,6 +108,15 @@ public class Oguz_US1531_AddingMessagePage {
     @FindBy(xpath = "//span[.='helpdesk1@cybertekschool.com']")
     public WebElement helpdesk1InBody;
 
+    @FindBy(xpath = "//span[@class='feed-add-post-tags-add']")
+    public WebElement addMoreTagBtn;
+
+    @FindBy(xpath = "//div[@class='feed-add-post-tags-wrap']/span")
+    public WebElement childOfTagBtn;
+
+
+    @FindBy(xpath = "//label[.='Video title:']")
+    public WebElement videoTitle;
 
 
 
