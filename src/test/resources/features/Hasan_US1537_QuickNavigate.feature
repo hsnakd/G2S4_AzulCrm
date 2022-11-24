@@ -10,7 +10,6 @@ Feature: Quick Navigate Menu feature
 
 
 # 1. HR User should be able to create a "High priority" tasks with the mandatory fields.
-
   @AZLC-1544
   Scenario:   HR User should be able to create a "High priority" tasks with the mandatory fields.
     And Click High Priority checkbox
@@ -22,7 +21,7 @@ Feature: Quick Navigate Menu feature
     Then Verify if the task is high priority
 
 
-  @AZLC-1545
+  @AZLC-1545  @smoke
 #  2. HR User should be able to assign a task to more than one user (Test with adding 3 users max.)
   Scenario: HR User should be able to assign a task to more than one user
     And Write Task Name in the Things to do box
@@ -56,6 +55,7 @@ Feature: Quick Navigate Menu feature
     And Click on the send button to send the task
     Then Verify that while creating a task checklist is added
 
+
   @AZLC-1548
 #  5. Deadline should be able to be added while creating a task.
   Scenario: Deadline should be able to be added while creating a task
@@ -64,6 +64,7 @@ Feature: Quick Navigate Menu feature
     And Add a deadline
     And  Click on the send button to send the task
     Then Verify that while creating a task deadline is added
+
 
   @AZLC-1549
 #  6. Time planning function should be able to be used in the setting of deadline.
