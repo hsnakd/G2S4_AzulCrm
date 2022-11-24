@@ -21,7 +21,7 @@ Feature: Quick Navigate Menu feature
     Then Verify if the task is high priority
 
 
-  @AZLC-1545  @smoke
+  @AZLC-1545
 #  2. HR User should be able to assign a task to more than one user (Test with adding 3 users max.)
   Scenario: HR User should be able to assign a task to more than one user
     And Write Task Name in the Things to do box
@@ -32,7 +32,7 @@ Feature: Quick Navigate Menu feature
     Then Verify the task is assigned more than one user
 
 
-  @AZLC-1546 @smoke
+  @AZLC-1546
 #  3. When task(s) is(are) created, they can be seen on the count on the homepage under "MY TASKS" table.
   Scenario: When task is created, it can be seen on the count on the homepage under "MY TASKS" table
     And Check task number
@@ -66,7 +66,7 @@ Feature: Quick Navigate Menu feature
     Then Verify that while creating a task deadline is added
 
 
-  @AZLC-1549
+  @AZLC-1549 @smoke
 #  6. Time planning function should be able to be used in the setting of deadline.
   Scenario Outline: Time planning function should be able to be used in the setting of deadline
     And Write Task Name in the Things to do box
