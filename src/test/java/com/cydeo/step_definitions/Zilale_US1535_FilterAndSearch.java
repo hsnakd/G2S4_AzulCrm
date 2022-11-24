@@ -3,16 +3,10 @@ package com.cydeo.step_definitions;
 import com.cydeo.pages.Zilale_US1535_FilterAndSearchPage;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
-import com.sun.jna.Structure;
-import io.cucumber.java.BeforeStep;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
 
 public class Zilale_US1535_FilterAndSearch {
     
@@ -88,6 +82,10 @@ public class Zilale_US1535_FilterAndSearch {
     public void clicksResetFunctionAfterAddAndRemoveProcess() {
         filterAndSearch.resetFunction.click();
         BrowserUtils.waitFor(2);
+        filterAndSearch.filterSearch.click();
+        BrowserUtils.waitFor(2);
+        filterAndSearch.restoreFields.click();
+        BrowserUtils.waitFor(2);
     }
 
     /*@Then("Verify that fields are movable")
@@ -106,8 +104,10 @@ public class Zilale_US1535_FilterAndSearch {
     public void userClicksDateList() {
         filterAndSearch.filterSearch.click();
         BrowserUtils.waitFor(2);
+
         filterAndSearch.dateDropdown.click();
         BrowserUtils.waitFor(2);
+
     }
 
     @And("Search by specifying the date")
@@ -136,6 +136,7 @@ public class Zilale_US1535_FilterAndSearch {
     public void userSelectsOneOrMoreOptionsInTheTypeFunction() {
         filterAndSearch.filterSearch.click();
         BrowserUtils.waitFor(2);
+
         System.out.println("DropDown before click");
         filterAndSearch.typeDropdown.click();
         BrowserUtils.waitFor(2);
@@ -164,6 +165,7 @@ public class Zilale_US1535_FilterAndSearch {
     public void userClicksSAVEFILTERFunction() {
         filterAndSearch.filterSearch.click();
         BrowserUtils.waitFor(2);
+
         filterAndSearch.saveFilterFunction.click();
         BrowserUtils.waitFor(2);
     }
@@ -190,6 +192,7 @@ public class Zilale_US1535_FilterAndSearch {
         filterAndSearch.filterSearch.click();
         BrowserUtils.waitFor(2);
 
+
         filterAndSearch.restoreFields.click();
         BrowserUtils.waitFor(2);
     }
@@ -206,6 +209,7 @@ public class Zilale_US1535_FilterAndSearch {
     public void userClicksConfigureFilterFunction() {
         filterAndSearch.filterSearch.click();
         BrowserUtils.waitFor(2);
+
         filterAndSearch.configureFilterFunction.click();
         BrowserUtils.waitFor(2);
     }

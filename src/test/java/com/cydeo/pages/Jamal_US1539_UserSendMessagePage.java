@@ -14,8 +14,8 @@ public class Jamal_US1539_UserSendMessagePage {
     String person1 = "helpdesk1@cybertekschool.com";
 
 
-    @FindBy(xpath = "//body[@style='min-height: 184px;']")
-    public WebElement messageArea;
+    @FindBy(xpath = "//span[@class='feed-add-post-micro-title']")
+    public WebElement messageAreaClick;
 
     @FindBy(xpath = "//button[@id='blog-submit-button-cancel']")
     public WebElement messageCancelButton;
@@ -24,8 +24,19 @@ public class Jamal_US1539_UserSendMessagePage {
     public WebElement messageSendButton ;
 
 
-    @FindBy(xpath = "//span[@class='feed-add-post-destination-text'][.='All employees']")
-    public WebElement allEmployees;
+
+    @FindBy(xpath = "//span[@id='feed-post-more-2734']")
+    public WebElement moreButton;
+
+
+    @FindBy(xpath = "//span[@class='menu-popup-item-text'][.='Delete']")
+    public WebElement DeleteButton;
+
+
+
+
+
+
 
 
 }

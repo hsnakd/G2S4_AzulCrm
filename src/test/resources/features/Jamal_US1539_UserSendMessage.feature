@@ -7,35 +7,30 @@ Feature: Message sending
   Background: log in page feature
     Given users log in with valid credentials as a "hr"
 
-  @AZLC-1595
+  @AZLC-1595 @smoke  #passed
   Scenario: User should be able to send a message by filling in the mandatory fields.
-    And Navigate to Activity Stream
-    And Navigate to Message Tab on the activity Stream
     And Type your Message
     When Click on Send button
     Then See your Message below
 
 
-  @AZLC-1596
+  @AZLC-1596 #passed
   Scenario: The message delivery should be to 'All employees' by default and should be changeable.
-    And Navigate to Activity Stream.
-    And Navigate to Message Tab on the activity Stream
-    And Type your Message
-    When Click on Send button
-    Then See your Message below
+    When Find on Sender All employees
+    Then See AllEmployees as a recipient vy default
 
-  @AZLC-1597
+
+  @AZLC-1597 #passed
   Scenario: User should be able to cancel sending messages at any time before sending.
-    And Navigate to Activity Stream.
-    And Navigate to Message Tab on the activity Stream
-    And Type your Message
+    And Type your Message2
     When Click on Cancel button
-    Then Message is not sent
+    Then Verify Message is not sent
+
+
 
   @AZLC-1598
   Scenario: User should be able to delete messages after sending.
-    And Navigate to Activity Stream.
-    And Navigate to Message Tab on the activity Stream
     And Find last sent message
     When Click on Delete button
-    Then Message has been deleted
+    Then Verify Message deleted
+
