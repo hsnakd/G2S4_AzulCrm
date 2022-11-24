@@ -115,7 +115,6 @@ public class Hasan_US1537_QuickNavigateTask {
 //        System.out.println("countAfter = " + countAfter);
 
         Assert.assertNotEquals(countBefore, countAfter);
-        Assert.assertEquals(countBefore, countAfter-1);
     }
 
     @And("Click Checklist link")

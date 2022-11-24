@@ -32,7 +32,7 @@ Feature: Quick Navigate Menu feature
     Then Verify the task is assigned more than one user
 
 
-  @AZLC-1546
+  @AZLC-1546 @smoke
 #  3. When task(s) is(are) created, they can be seen on the count on the homepage under "MY TASKS" table.
   Scenario: When task is created, it can be seen on the count on the homepage under "MY TASKS" table
     And Check task number
@@ -44,7 +44,7 @@ Feature: Quick Navigate Menu feature
     Then Verify that task is created under MY TASKS table
 
 
-  @AZLC-1547 @smoke
+  @AZLC-1547
 #  4. Checklist should be able to be added while creating a task.
   Scenario: Checklist should be able to be added while creating a task
     And Write Task Name in the Things to do box
