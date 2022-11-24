@@ -56,7 +56,7 @@ Feature: Quick Navigate Menu feature
     Then Verify that while creating a task checklist is added
 
 
-  @AZLC-1548
+  @AZLC-1548 @smoke
 #  5. Deadline should be able to be added while creating a task.
   Scenario: Deadline should be able to be added while creating a task
     And Write Task Name in the Things to do box
@@ -66,7 +66,7 @@ Feature: Quick Navigate Menu feature
     Then Verify that while creating a task deadline is added
 
 
-  @AZLC-1549 @smoke
+  @AZLC-1549
 #  6. Time planning function should be able to be used in the setting of deadline.
   Scenario Outline: Time planning function should be able to be used in the setting of deadline
     And Write Task Name in the Things to do box
