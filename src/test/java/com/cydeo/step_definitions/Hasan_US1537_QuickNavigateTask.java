@@ -73,7 +73,8 @@ public class Hasan_US1537_QuickNavigateTask {
     @Then("Verify the task is assigned more than one user")
     public void verify_the_task_is_assigned_more_than_one_user() {
         taskPage.taskName.click();
-//        BrowserUtils.waitFor(5);
+
+        BrowserUtils.waitFor(2);
 
         Driver.getDriver().switchTo().frame(2);
 
@@ -83,8 +84,12 @@ public class Hasan_US1537_QuickNavigateTask {
         String expectedSecondPeopleCheck = "marketing99@cybertekschool.com";
         String actualSecondPeopleCheck = taskPage.addSecondPeopleCheck.getText();
 
+        BrowserUtils.waitFor(2);
 
         Assert.assertEquals(expectedPeopleCheck, actualPeopleCheck);
+
+        BrowserUtils.waitFor(2);
+
         Assert.assertEquals(expectedSecondPeopleCheck, actualSecondPeopleCheck);
 
 
