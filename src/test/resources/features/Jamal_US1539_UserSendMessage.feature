@@ -1,4 +1,4 @@
-@AZLC-1539
+@AZLC-1539 @AZLC-1613
 Feature: Message sending
   User Story :
   As a user, I should be able to send messages by clicking on Message tab under Active Stream.
@@ -7,7 +7,7 @@ Feature: Message sending
   Background: log in page feature
     Given users log in with valid credentials as a "hr"
 
-  @AZLC-1595 @smoke  #passed
+  @AZLC-1595  @smoke  #passed
   Scenario: User should be able to send a message by filling in the mandatory fields.
     And Type your Message
     When Click on Send button
@@ -28,7 +28,7 @@ Feature: Message sending
 
 
 
-  @AZLC-1598
+  @AZLC-1598 #passed
   Scenario: User should be able to delete messages after sending.
     And Find last sent message
     When Click on Delete button
