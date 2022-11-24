@@ -21,9 +21,9 @@ Feature: Filter and search function feature
   Scenario: User should be able to add and remove fields.
   When User clicks Add field function
   And Clicks Data,Type,Author,To functions to remove fields
-  And Clicks Favorites,Tag,Exranet fuctions to add fields
+  And Clicks Favorites,Tag,Extranet functions to add fields
   And Clicks Reset function after add and remove process
-  Then Verify that fields are moveable
+  #Then Verify that fields are movable
 
 
 
@@ -42,8 +42,8 @@ Feature: Filter and search function feature
   #4. User should be able to search by selecting single or multiple types,
   @AZLC-1590
   Scenario: User should be able to search by selecting single or multiple types
-  When User selects one or more options in the type function
-  Then Verify that search by selecting single and multiple types
+  #When User selects one or more options in the type function
+  #Then Verify that search by selecting single and multiple types
 
 
 
@@ -53,8 +53,8 @@ Feature: Filter and search function feature
   Scenario: User should be able to save the filter
   When User clicks SAVE FILTER function
   And User sets the filter name
-  And User clicks SAVE fuction to save the filter name
-  Then Verify that user should be able to save the filter name
+  Then Verify User clicks SAVE function to save the filter name
+
 
 
 

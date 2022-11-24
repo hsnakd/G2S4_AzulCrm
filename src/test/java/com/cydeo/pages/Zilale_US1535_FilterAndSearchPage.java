@@ -64,9 +64,30 @@ public class Zilale_US1535_FilterAndSearchPage {
     @FindBy(xpath = "//div[@data-name='DATE_CREATE_datesel']")
     public WebElement dateDropdown;
 
+    @FindBy(xpath = "//div[@id='popup-window-content-main-filter-control-popup']//div[@class='main-ui-select-inner-item']/div[text()='Exact date']")
+    public WebElement exactDate;
+
+    @FindBy(xpath = "//input[@class='main-ui-control-input main-ui-date-input']")
+    public WebElement giveDate;
+
+    @FindBy(xpath = "//a[@class='bx-calendar-cell'][.=16]")
+    public WebElement date16;
+
+    @FindBy(xpath = "//button[contains(@class,'ui-btn-icon-search')]")
+    public WebElement searchButton;
+
+    @FindBy(xpath = "//div[@class='main-ui-square-item'][.='Date: 11/16/2022']")
+    public WebElement dateIsDisplayed;
+
     //4
     @FindBy(xpath = "//div[@class='main-ui-control main-ui-multi-select']")
     public WebElement typeDropdown;
+
+    @FindBy(xpath = "//div[@class='main-ui-control main-ui-multi-select']")
+    public WebElement postsCheckbox;
+
+    @FindBy(xpath = "//span[@class='main-ui-square'][.='Appreciations']")
+    public WebElement appreciationsCheckbox;
 
     //5
     @FindBy(xpath = "//span[@class='main-ui-filter-add-item']")
