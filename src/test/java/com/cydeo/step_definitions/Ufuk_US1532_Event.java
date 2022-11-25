@@ -20,7 +20,6 @@ import java.util.Objects;
 public class Ufuk_US1532_Event {
 
     Ufuk_US1532_EventPage eventPage=new Ufuk_US1532_EventPage();
-
     @When("user clicks event button")
     public void user_clicks_event_button() {
        eventPage.eventButton.click();
