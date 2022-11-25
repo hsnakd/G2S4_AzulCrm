@@ -25,7 +25,7 @@ public class Jamal_US1539_UserSendMessagePage {
 
 
 
-    @FindBy(xpath = "//span[@id='feed-post-more-2734']")
+    @FindBy(xpath = "//span[@id='feed-post-more-2784']")
     public WebElement moreButton;
 
 

@@ -1,4 +1,4 @@
-@AZLC-1532,@wip2
+@AZLC-1532
 Feature: AzulCrm Event Create
   User Story :  As a user, I should be able to create events by clicking on Event tab under Activity Stream.
 
@@ -36,7 +36,7 @@ Feature: AzulCrm Event Create
     Then  verify that All day is selected
 
 
-  @AZLC-1602
+  @AZLC-1602  @smoke
    Scenario Outline: User should be able to specify the time zone
     When   user clicks on Specify time zone link
     And    user clicks and select time zone1  "<zone1>"
