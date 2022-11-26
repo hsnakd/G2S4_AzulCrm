@@ -44,7 +44,7 @@ Feature: Quick Navigate Menu Task feature
     Then Verify that task is created under MY TASKS table
 
 
-  @AZLC-1547
+  @AZLC-1547 @smoke
 #  4. Checklist should be able to be added while creating a task.
   Scenario: Checklist should be able to be added while creating a task
     And Write Task Name in the Things to do box
@@ -56,7 +56,7 @@ Feature: Quick Navigate Menu Task feature
     Then Verify that while creating a task checklist is added
 
 
-  @AZLC-1548 @smoke
+  @AZLC-1548
 #  5. Deadline should be able to be added while creating a task.
   Scenario: Deadline should be able to be added while creating a task
     And Write Task Name in the Things to do box
