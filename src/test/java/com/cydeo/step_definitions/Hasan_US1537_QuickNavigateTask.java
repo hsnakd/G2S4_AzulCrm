@@ -65,7 +65,7 @@ public class Hasan_US1537_QuickNavigateTask {
 
         taskPage.taskName.click();
         Driver.getDriver().switchTo().frame(2);
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(5);
 
         Assert.assertEquals("High Priority", taskPage.highPriorityCheck.getText());
     }
@@ -88,7 +88,7 @@ public class Hasan_US1537_QuickNavigateTask {
 
         Assert.assertEquals(expectedPeopleCheck, actualPeopleCheck);
 
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(5);
 
         Assert.assertEquals(expectedSecondPeopleCheck, actualSecondPeopleCheck);
 
@@ -113,6 +113,7 @@ public class Hasan_US1537_QuickNavigateTask {
         countAfter = Integer.parseInt(taskPage.count.getText());
 //        System.out.println("countBefore = " + countBefore);
 //        System.out.println("countAfter = " + countAfter);
+        BrowserUtils.waitFor(5);
 
         Assert.assertNotEquals(countBefore, countAfter);
     }
@@ -146,6 +147,7 @@ public class Hasan_US1537_QuickNavigateTask {
 
         String expectedText = thingsToDo + " ";
         String actualText = taskPage.checkChecklistAdded.getText();
+        BrowserUtils.waitFor(5);
 
         Assert.assertEquals(expectedText, actualText);
     }
@@ -193,6 +195,7 @@ public class Hasan_US1537_QuickNavigateTask {
 
         String expectedText = "05/03/2023 07:00 pm";
         String actualText = taskPage.checkDeadline.getText();
+        BrowserUtils.waitFor(5);
 
         Assert.assertEquals(expectedText, actualText);
     }
@@ -262,6 +265,7 @@ public class Hasan_US1537_QuickNavigateTask {
 
         String expectedText = "05/03/2023 09:00 am";
         String actualText = taskPage.checkStartTimePlanningAdded.getText();
+        BrowserUtils.waitFor(5);
 
         Assert.assertEquals(expectedText, actualText);
     }
