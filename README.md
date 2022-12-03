@@ -119,4 +119,5 @@ delete it from your file, it will cause conflict.
 
 [GitHub Pages](https://github.com/hsnakd/G2S4_AzulCrm)
 
+![This is an image]([https://myoctocat.com/assets/images/base-octocat.sv](https://github.com/hsnakd/G2S4_AzulCrm/blob/master/CYDEO.png)
 ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
