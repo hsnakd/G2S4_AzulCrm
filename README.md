@@ -50,7 +50,7 @@ before starting to work on your feature,
 
 
 
-`#0969DA`	>**Pages Name**`#0969DA`	
+`#0969DA`	Pages Name`#0969DA`	
 >
     ==> Name_USNumber_USNamePage
     ==> Hasan_US1537_QuickNavigateTaskPage
