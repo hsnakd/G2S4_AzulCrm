@@ -1,30 +1,32 @@
 # G2S4_AzulCrm
-` Dear SDETs, for group project git-GitHub collaboration:` 
+`Dear SDETs, for group project git-GitHub collaboration` 
 
 1. You need to clone a new project from Version Control using the link that is shared by the project
 owner/git master,
 
 2. Before start writing your codes, you should create your own branch following our common
 naming convention as follows;
-Name_USNumber / Hasan_US1537
+
+    * Name_USNumber / Hasan_US1537
 
 3. While your head is on your own branch, you should right-click on your local Master branch and
 select the option “Merge into Current” in order to update your own branch, (No need for this
 step if you first created your own branch just before this step)
 
-4. Create your feature file with its User Story name e.g.
-Name_USNumber_USName / Hasan_US1537_QuickNavigateTask
-Create your step defs class with its User Story name e.g.
-Name_USNumber_USName / Hasan_US1537_QuickNavigateTask
-Create your page class with its User Story name e.g.
-Name_USNumber_USNamePage / Hasan_US1537_QuickNavigateTaskPage
+4. 
+   * Create your feature file with its User Story name e.g.
+      * Name_USNumber_USName / Hasan_US1537_QuickNavigateTask
+   * Create your step defs class with its User Story name e.g.
+     * Name_USNumber_USName / Hasan_US1537_QuickNavigateTask
+   * Create your page class with its User Story name e.g.
+     * Name_USNumber_USNamePage / Hasan_US1537_QuickNavigateTaskPage
 
 5. Do not forget to use Login steps which is already created by GitMaster as your Background
 in your own Feature file
-Background: log in page feature
-Given users log in with valid credentials as a "hr"
-                                               "marketing"
-                                               "helpdesk"
+   * Background: log in page feature
+   * Given users log in with valid credentials as an "hr"
+                                                     "marketing"
+                                                     "helpdesk"
 
 6. You should commit codes after you are done with your recent changes on your own branch,
 
@@ -117,8 +119,9 @@ delete it from your file, it will cause conflict.
    - ==> Name_USNumber_CommitName
    - ==> ***Hasan_US1537_TC01 Done***
 
-[GitHub Pages](https://github.com/hsnakd/G2S4_AzulCrm)
+# [GitHub Pages](https://github.com/hsnakd/G2S4_AzulCrm)
 
-![This is an image](https://github.com/hsnakd/G2S4_AzulCrm/blob/master/CYDEO.png)
+![Cydeo EU-9 Group-2](https://github.com/hsnakd/G2S4_AzulCrm/blob/master/CYDEO.png)
 
 ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+
