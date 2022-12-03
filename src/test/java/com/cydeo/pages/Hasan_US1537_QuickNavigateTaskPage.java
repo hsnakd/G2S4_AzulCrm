@@ -26,11 +26,17 @@ public class Hasan_US1537_QuickNavigateTaskPage {
     @FindBy(xpath = "//body[@style='min-height: 84px;']")
     public WebElement messageBox;
 
-    @FindBy(xpath = "//*[@id=\"bx-component-scope-lifefeed_task_form-responsible\"]/span[2]/a[1]")
+    @FindBy(xpath = "//a[@class='js-id-tdp-mem-sel-is-open-form task-form-field-when-filled task-form-field-link add']")
     public WebElement addMoreButton;
 
-    @FindBy(xpath = "//div[.='helpdesk1@cybertekschool.com']")
+    @FindBy(xpath = "(//a[contains(text(),'Add more')])[1]")
+    public WebElement addMoreButton2;
+
+    @FindBy(xpath = "(//div[@class='bx-finder-box-item-t7-name'])[1]")
     public WebElement addPeople;
+
+    @FindBy(xpath = "//div[.='helpdesk1@cybertekschool.com']")
+    public WebElement addPeople2;
 
     @FindBy(xpath = "//div[.='marketing99@cybertekschool.com']")
     public WebElement addSecondPeople;
@@ -43,6 +49,9 @@ public class Hasan_US1537_QuickNavigateTaskPage {
 
     @FindBy(xpath = "//span[@class='task-form-field-controls']")
     public WebElement addPeopleBox;
+
+    @FindBy(id = "blog-submit-button-save")
+    public WebElement sendButtonID;
 
     @FindBy(xpath = "//button[@id='blog-submit-button-save']")
     public WebElement sendButton;
@@ -86,7 +95,8 @@ public class Hasan_US1537_QuickNavigateTaskPage {
     @FindBy(xpath = "//span[@data-bx-month='4']")
     public WebElement selectMonth;
 
-    @FindBy(xpath = "//a[@class='bx-calendar-cell'] [.='3']")
+    @FindBy(xpath = "(//*[contains(@class, 'bx-calendar-cell')])[.='3']")
+//    @FindBy(xpath = "//a[@class='bx-calendar-cell'] [.='3']")
     public WebElement selectDay;
 
     @FindBy(xpath = "")
