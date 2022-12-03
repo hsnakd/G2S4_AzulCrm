@@ -19,7 +19,7 @@ Name_USNumber_USName / Hasan_US1537_QuickNavigateTask
 Create your page class with its User Story name e.g.
 Name_USNumber_USNamePage / Hasan_US1537_QuickNavigateTaskPage
 
-5- Do not forget to use Login steps which is already created by GitMaster as your Background
+5. Do not forget to use Login steps which is already created by GitMaster as your Background
 in your own Feature file
 Background: log in page feature
 Given users log in with valid credentials as a "hr"
@@ -49,16 +49,16 @@ before starting to work on your feature,
 
 
 
-->**Pages Name**	
+>**Pages Name**	
 >
-    ==> Name_USNumber_USNamePage
-    ==> Hasan_US1537_QuickNavigateTaskPage
+   - ==> Name_USNumber_USNamePage
+   - ==> Hasan_US1537_QuickNavigateTaskPage
 
 
 >**Step Definitions Name**
 >
-    ==> Name_USNumber_USName
-    ==> Hasan_US1537_QuickNavigateTask
+   - ==> Name_USNumber_USName
+   - ==> Hasan_US1537_QuickNavigateTask
     
     
 >**Features Name** 
