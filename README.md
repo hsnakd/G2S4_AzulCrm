@@ -118,4 +118,4 @@ delete it from your file, it will cause conflict.
     ==> Name_USNumber_CommitName
     ==> ***Hasan_US1537_TC01 Done***
 
-[GitHub Pages]([https://pages.github.com/](https://github.com/hsnakd/G2S4_AzulCrm))
+[GitHub Pages](https://github.com/hsnakd/G2S4_AzulCrm)
