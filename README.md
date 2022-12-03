@@ -50,7 +50,7 @@ before starting to work on your feature,
 
 
 
-`#0969DA`	Pages Name`#0969DA`	
+>**Pages Name**	
 >
     ==> Name_USNumber_USNamePage
     ==> Hasan_US1537_QuickNavigateTaskPage
@@ -118,4 +118,4 @@ delete it from your file, it will cause conflict.
     ==> Name_USNumber_CommitName
     ==> ***Hasan_US1537_TC01 Done***
 
-
+[GitHub Pages]([https://pages.github.com/](https://github.com/hsnakd/G2S4_AzulCrm))
