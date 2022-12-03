@@ -1,5 +1,4 @@
 # G2S4_AzulCrm
-`#ffffff`dwqqdwddq`#ffffff`
 ` Dear SDETs, for group project git-GitHub collaboration:` 
 
 **1-** You need to clone a new project from Version Control using the link that is shared by the project
@@ -119,3 +118,5 @@ delete it from your file, it will cause conflict.
     ==> ***Hasan_US1537_TC01 Done***
 
 [GitHub Pages](https://github.com/hsnakd/G2S4_AzulCrm)
+
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
