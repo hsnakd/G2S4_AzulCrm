@@ -51,12 +51,13 @@ before starting to work on your feature,
 
 
 >**Pages Name**
-
+>
     ==> Name_USNumber_USNamePage
     ==> Hasan_US1537_QuickNavigateTaskPage
 
 
-**Step Definitions Name**
+>**Step Definitions Name**
+>
     ==> Name_USNumber_USName
     ==> Hasan_US1537_QuickNavigateTask
     
@@ -76,8 +77,8 @@ before starting to work on your feature,
     "helpdesk"
 
 
-**configuration.properties**
-
+>**configuration.properties**
+>
     browser=chrome
     web.url=https://qa.azulcrm.com/
 
@@ -91,24 +92,28 @@ before starting to work on your feature,
     helpdesk.password=User
 
 
-**CukesRunner**
+>**CukesRunner**
+>
     dryRun = false,
     tags = "@wip",
 
 
-*Feature File
+>**Feature File**
+>
 Do not use @wip in your feature file while pushing the codes.
 Because if you send your "feature file" with @wip, your test
 cases will run with other people's files and if they want to
 delete it from your file, it will cause conflict.
 
 
-**Git Local Branch Name**
+>**Git Local Branch Name**
+>
     ==> Name_USNumber
     ==> ***Hasan_US1537***
 
 
-**Commit Name**
+>**Commit Name**
+>
     ==> Name_USNumber_CommitName
     ==> ***Hasan_US1537_TC01 Done***
 
