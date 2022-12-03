@@ -1,6 +1,6 @@
 # G2S4_AzulCrm
 
-'Dear SDETs, for group project git-GitHub collaboration:'
+` Dear SDETs, for group project git-GitHub collaboration:` 
 
 **1-** You need to clone a new project from Version Control using the link that is shared by the project
 owner/git master,
