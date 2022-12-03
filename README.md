@@ -4,7 +4,7 @@
 1. You need to clone a new project from Version Control using the link that is shared by the project
 owner/git master,
 
-**2.** Before start writing your codes, you should create your own branch following our common
+2. Before start writing your codes, you should create your own branch following our common
 naming convention as follows;
 Name_USNumber / Hasan_US1537
 
