@@ -63,44 +63,44 @@ before starting to work on your feature,
     
 >**Features Name** 
 >
-    ==> Name_USNumber_USName
-    ==> Hasan_US1537_QuickNavigateTask
+   - ==> Name_USNumber_USName
+   - ==> Hasan_US1537_QuickNavigateTask
 
 
 >**Pre-Conditions (Login)**
 >
-    Background: log in page feature
-    Given users log in with valid credentials as a "hr"  
+   - Background: log in page feature
+   - Given users log in with valid credentials as a "hr"  
     
-    "hr"    
-    "marketing"
-    "helpdesk"
+   - "hr"    
+   - "marketing"
+   - "helpdesk"
 
 
 >**configuration.properties**
 >
-    browser=chrome
-    web.url=https://qa.azulcrm.com/
+   - browser=chrome
+   - web.url=https://qa.azulcrm.com/
 
-    hr.username=hr1@cybertekschool.com
-    hr.password=UserUser
+   - hr.username=hr1@cybertekschool.com
+   - hr.password=UserUser
 
-    marketing.username=marketing99@cybertekschool.com
-    marketing.password=UserUser
+   - marketing.username=marketing99@cybertekschool.com
+   - marketing.password=UserUser
 
-    helpdesk.username=helpdesk1@cybertekschool.com
-    helpdesk.password=User
+   - helpdesk.username=helpdesk1@cybertekschool.com
+   - helpdesk.password=User
 
 
 >**CukesRunner**
 >
-    dryRun = false,
-    tags = "@wip",
+   - dryRun = false,
+   - tags = "@wip",
 
 
 >**Feature File**
 >
-Do not use @wip in your feature file while pushing the codes.
+- Do not use @wip in your feature file while pushing the codes.
 Because if you send your "feature file" with @wip, your test
 cases will run with other people's files and if they want to
 delete it from your file, it will cause conflict.
@@ -108,14 +108,14 @@ delete it from your file, it will cause conflict.
 
 >**Git Local Branch Name**
 >
-    ==> Name_USNumber
-    ==> ***Hasan_US1537***
+   - ==> Name_USNumber
+   - ==> ***Hasan_US1537***
 
 
 >**Commit Name**
 >
-    ==> Name_USNumber_CommitName
-    ==> ***Hasan_US1537_TC01 Done***
+   - ==> Name_USNumber_CommitName
+   - ==> ***Hasan_US1537_TC01 Done***
 
 [GitHub Pages](https://github.com/hsnakd/G2S4_AzulCrm)
 
