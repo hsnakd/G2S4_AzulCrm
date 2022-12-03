@@ -1,10 +1,10 @@
 # G2S4_AzulCrm
 ` Dear SDETs, for group project git-GitHub collaboration:` 
 
-1. You need to clone a new project from Version Control using the link that is shared by the project
+[ ] 1. You need to clone a new project from Version Control using the link that is shared by the project
 owner/git master,
 
-2. Before start writing your codes, you should create your own branch following our common
+[x] 2. Before start writing your codes, you should create your own branch following our common
 naming convention as follows;
 Name_USNumber / Hasan_US1537
 
@@ -52,7 +52,7 @@ before starting to work on your feature,
 >**Pages Name**	
 >
    - ==> Name_USNumber_USNamePage
- [ ]  - ==> Hasan_US1537_QuickNavigateTaskPage
+   - ==> Hasan_US1537_QuickNavigateTaskPage
 
 
 >**Step Definitions Name**
