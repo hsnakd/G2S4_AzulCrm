@@ -39,18 +39,24 @@ public class Hasan_US1537_QuickNavigateTask {
     }
 
     @When("Add an employee name to the Responsible person section")
-    public void add_an_employee_name_to_the_responsible_person_section() throws InterruptedException {
+    public void add_an_employee_name_to_the_responsible_person_section() {
         Driver.getDriver().switchTo().parentFrame();
 
+        BrowserUtils.waitFor(3);
         taskPage.addMoreButton.click();
-        BrowserUtils.waitFor(1);
+        BrowserUtils.waitFor(3);
         taskPage.addPeople.click();
-        BrowserUtils.waitFor(1);
+        BrowserUtils.waitFor(3);
         taskPage.addSecondPeople.click();
     }
 
     @When("Click on the send button to send the task")
     public void click_on_the_send_button_to_send_the_task() {
+        BrowserUtils.waitFor(1);
+        Driver.getDriver().switchTo().parentFrame();
+
+        BrowserUtils.waitFor(1);
+
         taskPage.sendButton.click();
     }
 
@@ -189,7 +195,7 @@ public class Hasan_US1537_QuickNavigateTask {
         taskPage.deadlineTask.click();
         BrowserUtils.waitFor(2);
 
-        Driver.getDriver().switchTo().frame(1);
+        Driver.getDriver().switchTo().frame(0);
 
         BrowserUtils.waitFor(2);
 

@@ -15,7 +15,6 @@ Feature: Quick Navigate Menu Task feature
     And Click High Priority checkbox
     And Write Task Name in the Things to do box
     And Write a message in the message box
-    And Add an employee name to the Responsible person section
     And Click on the send button to send the task
     And Click the TASK on the left side menu
     Then Verify if the task is high priority
@@ -38,7 +37,6 @@ Feature: Quick Navigate Menu Task feature
     And Check task number
     And Write Task Name in the Things to do box
     And Write a message in the message box
-    And Add an employee name to the Responsible person section
     And Click on the send button to send the task
     And Click the TASK on the left side menu
     Then Verify that task is created under MY TASKS table
