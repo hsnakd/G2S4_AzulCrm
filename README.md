@@ -50,7 +50,7 @@ before starting to work on your feature,
 
 
 
->**Pages Name**
+`#0969DA`	>**Pages Name**`#0969DA`	
 >
     ==> Name_USNumber_USNamePage
     ==> Hasan_US1537_QuickNavigateTaskPage
@@ -68,7 +68,7 @@ before starting to work on your feature,
     ==> Hasan_US1537_QuickNavigateTask
 
 
-`#0969DA`	>**Pre-Conditions (Login)**
+>**Pre-Conditions (Login)**
 >
     Background: log in page feature
     Given users log in with valid credentials as a "hr"  
