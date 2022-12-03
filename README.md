@@ -68,7 +68,8 @@ before starting to work on your feature,
     ==> Hasan_US1537_QuickNavigateTask
 
 
-**Pre-Conditions (Login)**
+`#0969DA`	>**Pre-Conditions (Login)**
+>
     Background: log in page feature
     Given users log in with valid credentials as a "hr"  
     
