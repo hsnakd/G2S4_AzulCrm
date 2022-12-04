@@ -71,7 +71,7 @@ public class Hasan_US1537_QuickNavigateTask {
 
         taskPage.taskName.click();
         Driver.getDriver().switchTo().frame(2);
-        BrowserUtils.waitFor(5);
+        BrowserUtils.waitForVisibility(taskPage.highPriorityCheck,3);
 
         Assert.assertEquals("High Priority", taskPage.highPriorityCheck.getText());
     }
@@ -119,7 +119,8 @@ public class Hasan_US1537_QuickNavigateTask {
         countAfter = Integer.parseInt(taskPage.count.getText());
 //        System.out.println("countBefore = " + countBefore);
 //        System.out.println("countAfter = " + countAfter);
-        BrowserUtils.waitFor(5);
+
+        BrowserUtils.waitFor(3);
 
         Assert.assertNotEquals(countBefore, countAfter);
     }
@@ -143,7 +144,8 @@ public class Hasan_US1537_QuickNavigateTask {
 
     @Then("Verify that while creating a task checklist is added")
     public void verifyThatWhileCreatingATaskChecklistIsAdded() {
-        BrowserUtils.waitFor(5);
+        BrowserUtils.waitForClickability(taskPage.checklistTask,10);
+
 
         taskPage.checklistTask.click();
 
@@ -153,7 +155,7 @@ public class Hasan_US1537_QuickNavigateTask {
 
         String expectedText = thingsToDo + " ";
         String actualText = taskPage.checkChecklistAdded.getText();
-        BrowserUtils.waitFor(5);
+        BrowserUtils.waitFor(2);
 
         Assert.assertEquals(expectedText, actualText);
     }
@@ -191,17 +193,17 @@ public class Hasan_US1537_QuickNavigateTask {
 
     @Then("Verify that while creating a task deadline is added")
     public void verifyThatWhileCreatingATaskDeadlineIsAdded() {
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitForClickability(taskPage.deadlineTask,10);
         taskPage.deadlineTask.click();
         BrowserUtils.waitFor(2);
 
         Driver.getDriver().switchTo().frame(0);
 
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitForVisibility(taskPage.checkDeadline,10);
 
         String expectedText = "05/03/2023 07:00 pm";
         String actualText = taskPage.checkDeadline.getText();
-        BrowserUtils.waitFor(5);
+        BrowserUtils.waitFor(2);
 
         Assert.assertEquals(expectedText, actualText);
     }
@@ -261,13 +263,14 @@ public class Hasan_US1537_QuickNavigateTask {
 
     @Then("Verify that while creating a task time planning is added")
     public void verifyThatWhileCreatingATaskTimePlanningIsAdded() {
-        BrowserUtils.waitFor(1);
+        BrowserUtils.waitForClickability(taskPage.timePlanningTask,10);
+
         taskPage.timePlanningTask.click();
         BrowserUtils.waitFor(2);
 
         Driver.getDriver().switchTo().frame(2);
 
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitForVisibility(taskPage.checkStartTimePlanningAdded,3);
 
         String expectedText = "05/03/2023 09:00 am";
         String actualText = taskPage.checkStartTimePlanningAdded.getText();
