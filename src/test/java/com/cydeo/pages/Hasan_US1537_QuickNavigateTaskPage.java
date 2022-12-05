@@ -80,6 +80,9 @@ public class Hasan_US1537_QuickNavigateTaskPage {
     @FindBy(xpath = "//*[contains(@class, 'js-id-checklist-is-i-titl')]")
     public WebElement checkChecklistAdded;
 
+    @FindBy(xpath = "//iframe[contains(@id, 'iframe')]")
+    public WebElement checklistVerifyIframe;
+
     @FindBy(xpath = "//input[@data-bx-id='datepicker-display'] [@class='task-options-inp']")
     public WebElement deadlineAdd;
 
