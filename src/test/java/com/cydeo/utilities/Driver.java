@@ -31,13 +31,13 @@ public class Driver {
         if (env != null) {
             switch (env) {
                 case "qa":
-                    Driver.getDriver().get("http://qa.vytrack.com");
+                    Driver.getDriver().get(ConfigurationReader.getProperty("qaEnvironment"));
                     break;
                 case "dev":
-                    Driver.getDriver().get("http://dev.vytrack.com");
+                    Driver.getDriver().get(ConfigurationReader.getProperty("devEnvironment"));
                     break;
                 case "stage":
-                    Driver.getDriver().get("http://stage.vytrack.com");
+                    Driver.getDriver().get(ConfigurationReader.getProperty("stageEnvironment"));
                     break;
             }
         } else {
