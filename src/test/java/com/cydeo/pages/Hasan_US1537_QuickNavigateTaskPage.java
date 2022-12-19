@@ -32,23 +32,26 @@ public class Hasan_US1537_QuickNavigateTaskPage {
     @FindBy(xpath = "(//a[contains(text(),'Add more')])[1]")
     public WebElement addMoreButton2;
 
-    @FindBy(xpath = "(//div[@class='bx-finder-box-item-t7-name'])[1]")
+    @FindBy(xpath = "(//div[.='helpdesk100@cybertekschool.com'])[3]")
     public WebElement addPeople;
+
+    @FindBy(xpath = "(//div[@class='bx-finder-box-item-t7-name'])[1]")
+    public WebElement addPeople1;
 
     @FindBy(xpath = "//div[.='helpdesk1@cybertekschool.com']")
     public WebElement addPeople2;
 
-    @FindBy(xpath = "//div[.='marketing99@cybertekschool.com']")
+    @FindBy(xpath = "(//div[.='marketing98@cybertekschool.com'])[3]")
     public WebElement addSecondPeople;
 
-    @FindBy(xpath = "(//*[contains(@id, 'anchor_responsible_')])[1]")
+    @FindBy(xpath = "//a[.='helpdesk100@cybertekschool.com']")
     public WebElement addPeopleCheck;
 
-    @FindBy(xpath = "(//*[contains(@id, 'anchor_responsible_')])[2]")
+    @FindBy(xpath = "//a[.='marketing98@cybertekschool.com']")
     public WebElement addSecondPeopleCheck;
 
-    @FindBy(xpath = "//span[@class='task-form-field-controls']")
-    public WebElement addPeopleBox;
+    @FindBy(xpath = "//*[contains(@id, 'destDepartmentTab')]")
+    public WebElement employeesAndDepartments;
 
     @FindBy(id = "blog-submit-button-save")
     public WebElement sendButtonID;
