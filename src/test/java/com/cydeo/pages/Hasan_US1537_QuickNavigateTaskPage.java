@@ -36,18 +36,15 @@ public class Hasan_US1537_QuickNavigateTaskPage {
     public WebElement addPeople;
 
     @FindBy(xpath = "(//div[@class='bx-finder-box-item-t7-name'])[1]")
-    public WebElement addPeople1;
-
-    @FindBy(xpath = "//div[.='helpdesk1@cybertekschool.com']")
     public WebElement addPeople2;
 
     @FindBy(xpath = "(//div[.='marketing98@cybertekschool.com'])[3]")
     public WebElement addSecondPeople;
 
-    @FindBy(xpath = "//a[.='helpdesk100@cybertekschool.com']")
+    @FindBy(xpath = "(//*[contains(@id, 'anchor_responsible')])[1]")
     public WebElement addPeopleCheck;
 
-    @FindBy(xpath = "//a[.='marketing98@cybertekschool.com']")
+    @FindBy(xpath = "(//*[contains(@id, 'anchor_responsible')])[2]")
     public WebElement addSecondPeopleCheck;
 
     @FindBy(xpath = "//*[contains(@id, 'destDepartmentTab')]")
@@ -62,8 +59,11 @@ public class Hasan_US1537_QuickNavigateTaskPage {
     @FindBy(xpath = "//a[@title='Tasks']")
     public WebElement taskLeftSide;
 
-    @FindBy(xpath = "//span[@class='if-not-no']")
+    @FindBy(xpath = "//div[@data-priority='2']")
     public WebElement highPriorityCheck;
+
+    @FindBy(xpath = "//div[@data-priority='2']")
+    public WebElement highPriorityCheck2;
 
     @FindBy(xpath = "//a[@class='task-title task-status-text-color-accepted']")
     public WebElement taskName;
