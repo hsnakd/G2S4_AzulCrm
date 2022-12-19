@@ -80,7 +80,7 @@ public class Hasan_US1537_QuickNavigateTask {
 
         taskPage.taskName.click();
         Driver.getDriver().switchTo().frame(2);
-        BrowserUtils.waitFor(5);
+        BrowserUtils.waitFor(10);
 
         Assert.assertEquals("High Priority", taskPage.highPriorityCheck.getText());
     }
@@ -89,10 +89,10 @@ public class Hasan_US1537_QuickNavigateTask {
     public void verify_the_task_is_assigned_more_than_one_user() {
         taskPage.taskName.click();
 
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(10);
 
         Driver.getDriver().switchTo().frame(2);
-        BrowserUtils.waitFor(5);
+        BrowserUtils.waitFor(10);
 
         String expectedPeopleCheck = "helpdesk100@cybertekschool.com";
         String actualPeopleCheck = taskPage.addPeopleCheck.getText();
@@ -100,7 +100,7 @@ public class Hasan_US1537_QuickNavigateTask {
         String expectedSecondPeopleCheck = "marketing98@cybertekschool.com";
         String actualSecondPeopleCheck = taskPage.addSecondPeopleCheck.getText();
 
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(10);
 
         Assert.assertEquals(expectedPeopleCheck, actualPeopleCheck);
 
@@ -226,7 +226,7 @@ public class Hasan_US1537_QuickNavigateTask {
 
     @And("Click Time Planning link")
     public void clickTimePlanningLink() {
-        Driver.getDriver().switchTo().parentFrame();
+//        Driver.getDriver().switchTo().parentFrame();
 //        BrowserUtils.waitFor(2);
         taskPage.timePlanning.click();
         BrowserUtils.waitFor(2);
