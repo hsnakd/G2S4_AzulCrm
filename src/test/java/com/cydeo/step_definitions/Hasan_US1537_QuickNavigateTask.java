@@ -76,37 +76,39 @@ public class Hasan_US1537_QuickNavigateTask {
 
     @Then("Verify if the task is high priority")
     public void verify_if_the_task_is_high_priority() {
-        BrowserUtils.waitFor(5);
+//        BrowserUtils.waitFor(5);
 
         taskPage.taskName.click();
         Driver.getDriver().switchTo().frame(2);
-        BrowserUtils.waitFor(10);
+//        BrowserUtils.waitFor(10);
 
-        Assert.assertEquals("High Priority", taskPage.highPriorityCheck.getText());
+//        Assert.assertEquals("High Priority", taskPage.highPriorityCheck.getText());
+        Assert.assertEquals("2", taskPage.highPriorityCheck.getAttribute("data-priority"));
     }
 
     @Then("Verify the task is assigned more than one user")
     public void verify_the_task_is_assigned_more_than_one_user() {
         taskPage.taskName.click();
 
-        BrowserUtils.waitFor(10);
+//        BrowserUtils.waitFor(10);
 
         Driver.getDriver().switchTo().frame(2);
-        BrowserUtils.waitFor(10);
+//        BrowserUtils.waitFor(10);
+//
+//        String expectedPeopleCheck = "helpdesk100@cybertekschool.com";
+//        String actualPeopleCheck = taskPage.addPeopleCheck.getText();
+//
+//        String expectedSecondPeopleCheck = "marketing98@cybertekschool.com";
+//        String actualSecondPeopleCheck = taskPage.addSecondPeopleCheck.getText();
+//
+//        BrowserUtils.waitFor(10);
+//        Assert.assertEquals(expectedSecondPeopleCheck, actualSecondPeopleCheck);
 
-        String expectedPeopleCheck = "helpdesk100@cybertekschool.com";
-        String actualPeopleCheck = taskPage.addPeopleCheck.getText();
-
-        String expectedSecondPeopleCheck = "marketing98@cybertekschool.com";
-        String actualSecondPeopleCheck = taskPage.addSecondPeopleCheck.getText();
-
-        BrowserUtils.waitFor(10);
-
-        Assert.assertEquals(expectedPeopleCheck, actualPeopleCheck);
+        Assert.assertTrue(taskPage.addPeopleCheck.isDisplayed());
+        Assert.assertTrue(taskPage.addSecondPeopleCheck.isDisplayed());
 
 //        BrowserUtils.waitFor(5);
 
-        Assert.assertEquals(expectedSecondPeopleCheck, actualSecondPeopleCheck);
 
 
     }
@@ -227,7 +229,7 @@ public class Hasan_US1537_QuickNavigateTask {
     @And("Click Time Planning link")
     public void clickTimePlanningLink() {
 //        Driver.getDriver().switchTo().parentFrame();
-//        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(2);
         taskPage.timePlanning.click();
         BrowserUtils.waitFor(2);
         taskPage.timePlanning.click();
@@ -235,19 +237,23 @@ public class Hasan_US1537_QuickNavigateTask {
 
     @And("Add a start time")
     public void addAStartTime() {
-        BrowserUtils.waitForClickability(taskPage.startTime,20);
+        BrowserUtils.waitFor(5);
+
+//        BrowserUtils.waitForClickability(taskPage.startTime,20);
 
         taskPage.startTime.click();
 
         taskPage.deadlineYear.click();
 //        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(2);
 
-        BrowserUtils.waitForClickability(taskPage.selectYear,10);
+//        BrowserUtils.waitForClickability(taskPage.selectYear,10);
         taskPage.selectYear.click();
 //        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(2);
 
         taskPage.deadlineMonth.click();
-//        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(2);
         BrowserUtils.waitForClickability(taskPage.selectMonth,20);
 
         taskPage.selectMonth.click();
